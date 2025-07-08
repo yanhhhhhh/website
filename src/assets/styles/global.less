@@ -1,0 +1,54 @@
+:root {
+  --hero-transition-delay: 1s;
+  --hero-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+// 自动换行
+.auto-wrap {
+  // white-space: pre-wrap;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-word; //  按英文单词整体截断换行
+  display: block;
+}
+
+// 强制换行
+.force-wrap {
+  word-break: break-all; // 允许在单词内换行
+  display: block;
+}
+
+// 强制不换行
+.force-no-wrap {
+  white-space: nowrap;
+}
+
+.mark {
+  z-index: 99;
+}
+
+.backBtn {
+  z-index: 33;
+}
+
+.diabled-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.hero-animate {
+  transition: all 3s var(--hero-transition-timing-function)
+    var(--hero-transition-delay);
+}
+
+.hero-animate--to-reveal {
+  transform: translateY(0.06rem) translateZ(0);
+  opacity: 0;
+}
+
+.hero-animate--revealed {
+  transform: translateZ(0);
+  opacity: 1;
+  // transition-duration: 3s;
+  // transition-delay: 1s
+}

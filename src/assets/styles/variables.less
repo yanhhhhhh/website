@@ -1,0 +1,62 @@
+@color-primary: #1761ff;
+
+@width-large: 1440px;
+@width-medium: 768x; // md
+@width-small: 375px;
+@navigation-height-pc: 0.64rem;
+@navigation-height-tablet: 0.88rem;
+@navigation-height-mobile: 0.8rem;
+@main-width: 12.2rem;
+.fontWeight700 {
+  font-weight: 700;
+  font-weight: bold;
+}
+
+.fontWeight600 {
+  font-weight: 600;
+  font-weight: bold;
+}
+
+.fontWeight500 {
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.fontWeight400 {
+  font-weight: 400;
+  font-weight: normal;
+}
+
+.fontWeight300 {
+  font-weight: 300;
+  font-weight: lighter;
+  font-weight: normal;
+}
+
+.fontWeight200 {
+  font-weight: 200;
+  font-weight: lighter;
+  font-weight: normal;
+}
+
+.fontWeight100 {
+  font-weight: 100;
+  font-weight: lighter;
+  font-weight: normal;
+}
+
+// 多行省略
+.showLines(@line: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: @line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 单行省略
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

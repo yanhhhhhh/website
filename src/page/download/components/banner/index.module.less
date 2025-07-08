@@ -1,0 +1,218 @@
+.downloadBanner {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100vw;
+    position: relative;
+    background-color: #000;
+
+    .bg {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100vw;
+      display: flex;
+      object-fit: fill;
+      object-position: center;
+    }
+
+    .content {
+      width: calc(100vw - 3.6rem * 2);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        color: #fff;
+        text-align: left;
+        max-width: 40%;
+
+        .title {
+          font-size: 0.48rem;
+          line-height: 0.88rem;
+
+          margin-bottom: 0.4rem;
+        }
+        .desc {
+          font-size: 0.2rem;
+          line-height: 1.2;
+          margin-bottom: 0.2rem;
+        }
+        .tip {
+          font-size: 0.2rem;
+          margin-bottom: 0.32rem;
+          color: #ababab;
+          .icon {
+            margin-right: 0.13rem;
+          }
+        }
+        .certification {
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+          font-size: 0.24rem;
+          color: #333333;
+          line-height: 0.35rem;
+          .button {
+            color: #333333;
+            margin-bottom: 20px;
+            padding: 0.15rem 0.2rem;
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 8px 8px 8px 8px;
+            border-width: 0;
+            cursor: pointer;
+            justify-content: center;
+
+            .icon {
+              font-size: 0.4rem;
+              margin-right: 0.1rem;
+            }
+          }
+          .anchor {
+            margin-top: 0.2rem;
+            padding: 0.14rem 0.48rem;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            &:hover {
+              background-color: #fff;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+    .right {
+      width: 9.16rem;
+      height: 7.32rem;
+      position: absolute;
+      bottom: 0;
+      right: 1.25rem;
+    }
+  }
+}
+
+.mobileUI {
+  .en.downloadBanner {
+    section {
+      .content {
+        .left {
+          max-width: unset;
+          .title {
+            margin-bottom: 0.2rem;
+          }
+          .desc {
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+  .downloadBanner {
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 13rem;
+      width: 100vw;
+      position: relative;
+      background-color: #000;
+
+      .bg {
+        justify-content: center;
+        align-items: center;
+        height: 13rem;
+        width: 100vw;
+        display: flex;
+        object-fit: fill;
+        object-position: center;
+      }
+
+      .content {
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        padding: 0.8rem 0.59rem 0;
+
+        .left {
+          color: #fff;
+          text-align: center;
+          margin-bottom: 0.4rem;
+          max-width: unset;
+
+          .title {
+            font-size: 0.48rem;
+            line-height: 0.88rem;
+
+            margin-bottom: 0.4rem;
+          }
+          .desc {
+            font-size: 0.3rem;
+            line-height: 1.8;
+            padding: 0 1.2rem;
+            margin-bottom: 0.1rem;
+            font-weight: 400;
+          }
+          .tip {
+            font-size: 0.3rem;
+          }
+          .certification {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 0.3rem;
+            color: #333333;
+            line-height: 1.2;
+            .button {
+              margin-bottom: 0.2rem;
+              padding: 0.2rem 0;
+
+              justify-content: center;
+              background: #ffffff;
+
+              .icon {
+                font-size: 0.5rem;
+                margin-right: 0.1rem;
+              }
+            }
+            .anchor {
+              padding: 0.2rem 0;
+
+              &:hover {
+                background-color: #fff;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        width: 100vw;
+        height: 6rem;
+        position: absolute;
+        // display: none;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

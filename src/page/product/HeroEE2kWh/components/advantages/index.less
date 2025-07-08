@@ -1,0 +1,155 @@
+.HeroEE2Advantages {
+  width: 100vw;
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 0.6rem;
+  .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      font-weight: 700;
+      font-size: 0.5rem;
+      color: #ffffff;
+      margin-bottom: 0.1rem;
+    }
+    .desc {
+      font-weight: 350;
+      font-size: 0.24rem;
+      color: #ffffff;
+      margin-bottom: 0.98rem;
+    }
+  }
+  .advantages {
+    display: flex;
+    justify-content: center;
+
+    .advantage {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      color: #ffffff;
+      .title,
+      .secondDescription {
+        font-weight: 350;
+        font-size: 0.2rem;
+      }
+      .title {
+        margin-bottom: 0.07rem;
+      }
+      .secondDescription {
+        margin-bottom: 0.21rem;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.12rem;
+
+        &-number {
+          color: @color-primary;
+          font-size: 0.32rem;
+          font-weight: 900;
+        }
+        &-desc {
+          font-weight: 350;
+          font-size: 0.2rem;
+          margin-left: 0.1rem;
+          font-weight: 700;
+        }
+      }
+    }
+    .first {
+      margin-right: 2.62rem;
+      display: flex;
+      flex-direction: column;
+      .img {
+        width: 3.15rem;
+        height: 2.69rem;
+      }
+    }
+    .second {
+      .img {
+        width: 2.63rem;
+        height: 2.44rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .HeroEE2Advantages {
+    height: 14.14rem;
+    padding-top: 0.46rem;
+    box-sizing: border-box;
+    .top {
+      .title {
+        font-size: 0.6rem;
+        margin-bottom: 0;
+      }
+      .desc {
+        font-size: 0.4rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    .advantages {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .advantage {
+        justify-content: center;
+        align-items: center;
+        .title,
+        .secondDescription {
+          font-size: 0.26rem;
+        }
+        .text-wrap {
+          width: fit-content;
+        }
+        .title {
+          margin-bottom: 0.09rem;
+        }
+        .secondDescription {
+          margin-bottom: 0.4rem;
+        }
+        .center {
+          margin-bottom: 0.17rem;
+
+          &-number {
+            font-size: 0.4rem;
+          }
+          &-desc {
+            font-size: 0.3rem;
+          }
+        }
+      }
+      .first {
+        margin-right: 0;
+        margin-bottom: 0.78rem;
+        margin-left: 0;
+
+        .img {
+          width: 4.12rem;
+          height: 2.9rem;
+          margin-left: 0;
+        }
+      }
+      .second {
+        .img {
+          width: 3.08rem;
+          height: 3.2rem;
+          align-self: center;
+        }
+      }
+    }
+  }
+  .en.HeroEE2Advantages {
+    .top {
+      .desc {
+        font-size: 0.3rem;
+        line-height: 1;
+      }
+    }
+  }
+}

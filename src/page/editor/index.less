@@ -1,0 +1,148 @@
+@top-height: 340px;
+
+.hero-editor {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  // padding-bottom: 35px;
+
+  // overflow: hidden;
+  &-content-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .page-config {
+      display: flex;
+
+      &-menu-item {
+        display: flex;
+
+        padding: 8px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        justify-content: center;
+        align-items: center;
+        background-color: #f6f6f6;
+        min-width: 60px;
+        font-size: 14px;
+
+        &.active,
+        &:hover {
+          background-color: @color-primary;
+          color: #fff;
+        }
+      }
+      &-item {
+        display: flex;
+        flex-direction: column;
+        margin-right: 8px;
+        padding: 5px;
+        border-radius: 2px;
+        background-color: #f6f6f6;
+        cursor: pointer;
+        font-size: 12px;
+        &.active,
+        &:hover {
+          background-color: @color-primary;
+          color: #fff;
+        }
+      }
+    }
+    .copy-button {
+      padding: 10px;
+      background-color: @color-primary;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+    }
+  }
+  &-content {
+    display: flex;
+    margin-top: 10px;
+    flex: 1;
+
+    overflow: scroll;
+    &-left {
+      width: 10%;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: #f6f6f6;
+      margin-right: 10px;
+      &-item {
+        background-color: #d8d8d8;
+
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid transparent;
+        cursor: pointer;
+        padding: 20px 0;
+        &.active,
+        &:hover {
+          border-color: @color-primary;
+        }
+        &.disable {
+          cursor: not-allowed;
+          border-color: #ccc;
+          background-color: #ccc;
+        }
+        &-title {
+          text-align: center;
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+    }
+    &-right {
+      flex: 1;
+      padding: 10px;
+      border-radius: 4px;
+
+      background-color: #f6f6f6;
+      &-title {
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 10px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #d9d9d9;
+      }
+      .components {
+        display: flex;
+
+        margin-bottom: 10px;
+      }
+      .component-config {
+        &-content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        .preview {
+          // overflow-x: scroll;
+
+          &-content {
+            // overflow: hidden;
+            // overflow-x: scroll;
+          }
+        }
+        .config {
+          width: 40%;
+          min-width: 6rem;
+          .config-content {
+            // padding-bottom: 100px;
+            height: calc(100vh - @top-height);
+            overflow-y: scroll;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,146 @@
+.news-card {
+  width: 4rem;
+
+  background: #ffffff;
+  margin-bottom: 0.2rem;
+  margin-right: 0.2rem;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:nth-of-type(3n) {
+    margin-right: 0;
+  }
+
+  &-content {
+    position: relative;
+    padding: 0.1rem;
+    .text {
+      font-weight: 700;
+      font-size: 0.16rem;
+      color: #333333;
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+      cursor: pointer;
+      width: 3.8rem;
+      word-break: break-all;
+
+      .showLines(2);
+      &:hover {
+        color: @color-primary;
+      }
+    }
+    // p {
+    //   font-size: 0.18rem;
+    //   color: #666666;
+    //   line-height: 1.4;
+    //   margin-bottom: 0.4rem;
+    //   .showLines(4);
+    // }
+    .news-card-bottom {
+      font-size: 0.14rem;
+      line-height: 1.8;
+      padding: 0 0.14rem 0 0;
+      display: flex;
+      justify-content: space-between;
+      .time {
+        color: #666666;
+      }
+
+      .more {
+        cursor: pointer;
+        font-weight: 700;
+        color: @color-primary;
+      }
+    }
+  }
+  &-media {
+    width: 4rem;
+    height: 2.25rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      object-position: center;
+    }
+  }
+  &-tag {
+    background: @color-primary;
+    font-weight: 700;
+    font-size: 0.16rem;
+    color: #ffffff;
+    line-height: 2.2;
+    padding: 0 0.18rem;
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    z-index: 1;
+  }
+}
+.mobileUI {
+  .news-card {
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 100%;
+
+    &-content {
+      position: relative;
+      padding: 0.2rem;
+      .text {
+        font-weight: 700;
+        font-size: 0.4rem;
+        color: #333333;
+        line-height: 1.1;
+        margin-bottom: 0;
+        height: 0.88rem;
+        cursor: pointer;
+        width: 100%;
+        .showLines(2);
+        &:hover {
+          color: @color-primary;
+        }
+      }
+
+      .news-card-bottom {
+        font-size: 0.3rem;
+        line-height: 1.8;
+        padding: 0;
+        flex-direction: column;
+        .time {
+          color: #666666;
+        }
+
+        .more {
+          margin-top: 0.2rem;
+          text-align: center;
+          width: 100%;
+          border: 1px solid #6666669d;
+          border-radius: 4px;
+          line-height: 1;
+          padding: 0.24rem 0;
+        }
+      }
+    }
+    &-media {
+      width: 100%;
+      height: 3.78rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        object-position: center;
+      }
+    }
+    &-tag {
+      font-size: 0.3rem;
+      top: 0.4rem;
+      padding: 0 0.34rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

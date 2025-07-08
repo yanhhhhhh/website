@@ -1,0 +1,50 @@
+.preview-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  width: 100vw;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  .preview-bar-left {
+    display: flex;
+    align-items: center;
+    .preview-bar-left-item {
+      margin-right: 20px;
+      cursor: pointer;
+      .preview-bar-left-item-icon {
+        font-size: 20px;
+      }
+    }
+  }
+  .preview-bar-right {
+    display: flex;
+    align-items: center;
+    .preview-bar-right-item {
+      margin-right: 20px;
+      cursor: pointer;
+      .preview-bar-right-item-icon {
+        font-size: 20px;
+      }
+    }
+  }
+}
+.mobileUI {
+  .preview-bar {
+    font-size: 20px !important;
+    height: unset;
+    flex-direction: column;
+    .preview-bar-left {
+      flex-direction: column;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

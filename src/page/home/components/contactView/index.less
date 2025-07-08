@@ -1,0 +1,77 @@
+.hero-contact-view {
+  width: 100vw;
+  height: 8rem;
+  .hero-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      font-size: 0.5rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+    .contact-item {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      width: 5.36rem;
+      height: 0.7rem;
+      border-radius: 8px 8px 8px 8px;
+      border: 1px solid #ffffff;
+      padding: 0.2rem 0;
+      display: flex;
+      justify-content: center;
+      color: #ffffff;
+      margin-bottom: 0.16rem;
+      .icon {
+        svg {
+          width: 0.32rem !important;
+          height: 0.32rem !important;
+        }
+        margin-right: 0.2rem;
+
+        display: flex;
+        align-items: center;
+      }
+      .text {
+        font-size: 0.24rem;
+      }
+    }
+    .contact-item[data-type='titok'] {
+      cursor: pointer;
+    }
+    .contact-item[data-type='email'] {
+      cursor: pointer;
+    }
+  }
+}
+.mobileUI {
+  .hero-contact-view {
+    height: 12.1rem;
+    .hero-content {
+      .title {
+        font-size: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .contact-item {
+        width: 5.38.5rem;
+        height: 0.7rem;
+        border-radius: 8px;
+        padding: 0.2rem 0;
+
+        margin-bottom: 0.16rem;
+        .icon {
+          margin-right: 0.2rem;
+        }
+        .text {
+          font-size: 0.24rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

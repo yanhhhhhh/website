@@ -1,0 +1,27 @@
+.heroee-ai-chat-page {
+  height: 750px;
+  background-color: #080a0e;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  .webchat-container {
+    position: relative;
+    right: unset;
+
+    bottom: 0;
+  }
+}
+.mobileUI {
+  .heroee-ai-chat-page {
+    height: 1150px;
+
+    .webchat-container {
+      right: unset;
+
+      bottom: 0;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

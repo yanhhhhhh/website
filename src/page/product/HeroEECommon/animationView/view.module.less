@@ -1,0 +1,108 @@
+.scene {
+  width: 100vw;
+
+  position: relative;
+
+  .temple {
+    height: 8rem;
+    z-index: -1;
+  }
+  .header {
+    position: absolute;
+    top: 0.54rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    .title {
+      font-weight: 700;
+      font-size: 0.45rem;
+      line-height: 1.2;
+      margin-bottom: 0.18rem;
+    }
+    .desc {
+      font-size: 0.24rem;
+    }
+  }
+  .cover {
+    width: 100vw;
+    height: 8rem;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // animation: move 5s linear infinite alternate;
+
+    // animation: name duration timing-function delay iteration-count direction fill-mode;
+  }
+
+  // @keyframes move {
+  //   0% {
+  //     background-image: @backgroundImage1;
+  //     background-size: 100% 100%;
+  //     background-position: center center;
+  //     background-repeat: no-repeat;
+  //   }
+  //   40% {
+  //     background-image: @backgroundImage1;
+  //     background-size: 100% 100%;
+  //   }
+  //   60% {
+  //     background-image: @backgroundImage2;
+  //     background-size: 100% 100%;
+  //   }
+  //   100% {
+  //     background-image: @backgroundImage2;
+  //     background-size: 100% 100%;
+  //   }
+  // }
+}
+
+.tabletUI() {
+}
+
+.mobileUI() {
+  .scene {
+    height: 11.4rem;
+    .temple {
+      height: 11.4rem;
+    }
+    .cover {
+      width: 100%;
+      height: 11.4rem;
+      top: 0;
+
+      object-fit: cover;
+    }
+    .header {
+      top: 0.54rem;
+      width: 100%;
+
+      .title {
+        font-weight: 700;
+        font-size: 0.42rem;
+        line-height: 1.2;
+        margin-bottom: 0.1rem;
+        width: 96%;
+        margin: 0 auto;
+      }
+      .desc {
+        width: 90%;
+        font-size: 0.3rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// ipad 竖屏
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

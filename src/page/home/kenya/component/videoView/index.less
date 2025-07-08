@@ -1,0 +1,64 @@
+.kenya-video-view {
+  width: 100vw;
+  height: 8rem;
+  &-content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .title {
+      font-size: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: #000000;
+      line-height: 1.3;
+    }
+    .list {
+      display: flex;
+
+      .img-item {
+        width: 2.8rem;
+        height: 4.5rem;
+        margin-right: 0.24rem;
+        border-radius: 8px;
+        cursor: pointer;
+        position: relative;
+        img {
+          border-radius: 8px;
+        }
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 0.6rem;
+          height: 0.6rem;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+.mobileUI {
+  .kenya-video-view {
+    height: 12.5rem;
+    &-content {
+      .list {
+        flex-wrap: wrap;
+        padding: 0 0.6rem;
+        justify-content: space-between;
+        .img-item {
+          width: 3rem;
+          margin-right: 0;
+          margin-bottom: 0.2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

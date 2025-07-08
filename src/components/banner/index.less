@@ -1,0 +1,83 @@
+.banner {
+  position: relative;
+  height: 8rem;
+  width: 100vw;
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bg {
+      justify-content: center;
+      align-items: center;
+      // height: 100%;
+      height: 8rem;
+      width: 100vw;
+      display: flex;
+      object-fit: fill;
+      object-position: center;
+    }
+
+    .content {
+      position: absolute;
+      text-align: center;
+
+      .title {
+        font-size: 0.48rem;
+        line-height: 0.88rem;
+        color: #fff;
+      }
+      .desc {
+        margin-top: 0.45rem;
+        font-size: 0.24rem;
+        line-height: 0.35rem;
+        color: #fff;
+        white-space: pre-wrap;
+      }
+      .more {
+        font-size: 0.24rem;
+        line-height: 0.35rem;
+      }
+      &.top {
+        top: 0.76rem;
+      }
+      &.center {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+.mobileUI {
+  .banner {
+    height: 7.8rem;
+
+    section {
+      .bg {
+        height: 7.8rem;
+      }
+
+      .content {
+        .title {
+          font-size: 0.4rem;
+          line-height: 1.6;
+          padding: 0 0.4rem;
+        }
+        .desc {
+          font-size: 0.28rem;
+          line-height: 1.5;
+
+          margin-bottom: 0.57rem;
+        }
+
+        &.top {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

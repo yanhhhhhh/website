@@ -1,0 +1,86 @@
+.aboutUsBanner {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100vw;
+    position: relative;
+    background-color: #000;
+
+    .bg {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100vw;
+      display: flex;
+      object-fit: fill;
+      object-position: center;
+    }
+
+    .content {
+      position: absolute;
+      left: 3.6rem;
+      text-align: left;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .title {
+        font-size: 0.48rem;
+        line-height: 2;
+        color: #fff;
+        margin-bottom: 0.4rem;
+      }
+      .descWraap {
+        max-width: 9rem;
+      }
+      .desc {
+        font-size: 0.24rem;
+        line-height: 1.5;
+        color: #fff;
+        display: inline-block;
+      }
+    }
+  }
+}
+.en.aboutUsBanner {
+  .desc {
+    display: block;
+  }
+}
+.mobileUI {
+  .aboutUsBanner {
+    height: 7.8rem;
+    section {
+      .bg {
+        height: 7.8rem;
+      }
+      .content {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        // white-space: nowrap;
+        padding: 0 0.6rem;
+        width: 100%;
+        box-sizing: border-box;
+
+        .title {
+          margin-bottom: 0.5rem;
+          font-size: 0.44rem;
+        }
+        .descWraap {
+          max-width: unset;
+        }
+        .desc {
+          font-size: 0.3rem;
+          display: block;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

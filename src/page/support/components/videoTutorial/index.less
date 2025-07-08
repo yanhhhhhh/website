@@ -1,0 +1,138 @@
+.support-video-tutorial {
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.18rem;
+    margin-bottom: -0.42rem;
+  }
+  &__item {
+    margin-right: 0.18rem;
+    margin-bottom: 0.42rem;
+    cursor: pointer;
+    max-width: 2.58rem;
+    &__img {
+      width: 2.58rem;
+      height: 1.45rem;
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .video-js {
+        width: 2.58rem;
+        height: 1.45rem;
+        button.vjs-big-play-button {
+          width: 1.6em;
+          height: 1.6em;
+          border-radius: 50%;
+          transform: translate(50%, 0);
+        }
+      }
+
+      &__play {
+        width: 0.35rem;
+        height: 0.35rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    &__title {
+      margin-top: 0.12rem;
+      font-size: 0.16rem;
+      color: #333333;
+    }
+  }
+}
+div.support-video-tutorial__modal {
+  width: 80% !important;
+  .hero-modal-content {
+    height: 10rem;
+    // padding: 0;
+    .hero-modal-body {
+      width: 100%;
+      height: 100%;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+      }
+    }
+    .hero-modal-close {
+      z-index: 1111;
+      top: 2px;
+      right: 2px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  div.support-video-tutorial__modal {
+    width: 100% !important;
+    .hero-modal-content {
+      height: 4rem;
+      .hero-modal-body {
+        // height: 90%;
+        video {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .hero-modal-close {
+        z-index: 1111;
+      }
+    }
+  }
+}
+.support-video-tutorial-mobile {
+  min-height: 16rem;
+  &__swiper {
+    margin-top: 0.3rem;
+  }
+  .support-video-tutorial__swiper-item {
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.14rem;
+    &-container {
+      width: 98%;
+      cursor: pointer;
+      margin: 0 auto;
+      margin-bottom: 0.4rem;
+
+      &__img {
+        width: 100%;
+        height: 3.6rem;
+        // position: relative;
+
+        .video-js {
+          width: 100%;
+          height: 3.6rem;
+
+          button.vjs-big-play-button {
+            width: 1.6em;
+            height: 1.6em;
+            border-radius: 50%;
+            transform: translate(50%, 0);
+          }
+        }
+
+        &__play {
+          width: 0.35rem;
+          height: 0.35rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      &__title {
+        margin-top: 0.12rem;
+        font-size: 0.16rem;
+        color: #333333;
+      }
+    }
+  }
+}

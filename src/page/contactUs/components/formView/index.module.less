@@ -1,0 +1,87 @@
+.form-view {
+  padding: 0.4rem 6rem 0.7rem;
+  background: #f4f4f4;
+
+  &__title {
+    font-size: 0.48rem;
+    font-weight: 500;
+    margin-bottom: 0.1rem;
+    text-align: center;
+  }
+  &___subtitle {
+    font-size: 0.24rem;
+
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+  :global {
+    .hero-btn {
+      width: 100%;
+      height: fit-content;
+      margin-top: 0.4rem;
+      font-size: 0.28rem;
+      padding-top: 0.26rem;
+      padding-bottom: 0.26rem;
+      &:disabled {
+        background: RGBA(134, 170, 250, 1);
+        color: #fff;
+      }
+    }
+  }
+}
+
+.consult-form {
+  .form-item {
+    font-size: 16px !important;
+    :global {
+      .hero-input-textarea-allow-clear > .hero-input {
+        padding-inline-end: 40px;
+      }
+      .hero-input-textarea-affix-wrapper.hero-input-affix-wrapper
+        .hero-input-suffix
+        .hero-input-clear-icon {
+        inset-inline-end: 20px;
+      }
+      input {
+        padding: 16px 10px;
+      }
+      .hero-select-single {
+        height: 56px;
+      }
+      textarea {
+        height: 94px;
+      }
+    }
+  }
+  :global {
+    label {
+      font-size: 16px !important;
+    }
+  }
+}
+
+.mobileUI {
+  .form-view {
+    padding: 0.8rem 0.6rem;
+    :global {
+      .hero-btn {
+        font-size: 0.28rem;
+      }
+    }
+  }
+
+  .consult-form {
+    .form-item {
+      font-size: 14px !important;
+    }
+    :global {
+      label {
+        font-size: 14px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

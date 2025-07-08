@@ -1,0 +1,57 @@
+.box {
+  border-radius: 0.08rem;
+  padding: 0.14rem;
+
+  .label {
+    display: inline-block;
+    margin-right: 0.32rem;
+    font-size: 0.22rem;
+    color: #fff;
+  }
+
+  :global {
+    .hero-space-item {
+      // color: rgba(255, 255, 255, 0.60);
+      color: #fff;
+      font-size: 0.22rem;
+
+      .anticon {
+        color: #fff;
+        font-size: 0.13rem;
+      }
+    }
+  }
+}
+
+.tabletUI() {
+}
+
+.mobileUI() {
+  .box {
+    border-width: 1px;
+    padding: unset;
+    font-size: 12px;
+
+    .label {
+      margin-right: 0.06rem;
+      font-size: 12px;
+    }
+
+    :global {
+      .hero-space-item {
+        font-size: 12px;
+
+        .anticon {
+          font-size: 7px;
+        }
+      }
+    }
+  }
+}
+
+// ipad 竖屏
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

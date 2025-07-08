@@ -1,0 +1,58 @@
+.heroEE16kWh-blackout-feature-wrapper {
+  position: absolute;
+  bottom: 0.1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.68rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    .icon {
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-bottom: 0.08rem;
+    }
+    .title {
+      font-size: 16px;
+      color: #ffffff;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .heroEE16kWh-blackout-feature-wrapper {
+    bottom: 0.5rem;
+    .feature {
+      display: flex;
+
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      .icon {
+        width: 0.45rem;
+        height: 0.45rem;
+        margin-bottom: 0.13rem;
+      }
+      .title {
+        font-size: 16px;
+        color: #ffffff;
+
+        white-space: nowrap;
+      }
+    }
+  }
+  .heroEE16kWh-blackout-feature-wrapper .en {
+    .feature {
+      margin-right: 0.3rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

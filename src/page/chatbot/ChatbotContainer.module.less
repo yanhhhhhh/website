@@ -1,0 +1,193 @@
+:root {
+  --webchat-toolbar-text-color: #fff;
+  --background-color: #fff;
+  --webchat-toolbar-background-color: #1464e4;
+  --border-color: #666;
+
+  --webchat-toolbar-text-color-dark: #333;
+  --background-color-dark: #181818;
+  --border-color-dark: #eeecf0;
+}
+/* @media (prefers-color-scheme: dark) { */
+/* :root { */
+/* 当系统设置为深色模式时，覆盖变量值 */
+/* --webchat-toolbar-text-color: var(--webchat-toolbar-text-color-dark); */
+/* --background-color: var(--background-color-dark); */
+/* --border-color-dark: var(--border-color-dark); */
+/* 这里直接使用了之前定义的深色变量，实际中你可以直接定义新的颜色值 */
+/* } */
+/* } */
+
+.bubbleTip {
+  background-size: 100%;
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.chatBoxContainer {
+  display: none;
+  position: fixed;
+  bottom: 92px;
+  right: 77px;
+  width: 373px;
+  height: 635px;
+  z-index: 1000;
+}
+
+.toolbar {
+  display: block;
+  /* position: relative; */
+  height: 72px;
+  width: 100%;
+  background-image: url('@/assets/images/chatbot/toolbar-bg.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  .avatarContainer {
+    width: 92px;
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    .chatbotAvatar {
+      width: 90px;
+      height: 60px;
+    }
+  }
+  .nameContainer {
+    position: absolute;
+    top: 42px;
+    left: 100px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .iconText {
+      width: 26px;
+      height: 24px;
+    }
+    .chatbotName {
+      color: #333333;
+      font-size: 20px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+  }
+}
+
+.chatBoxVisible {
+  display: block;
+}
+
+.toolbar button {
+  // position: absolute;
+  // top: 6px;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none; /* 添加这一行来移除所有状态下的边框 */
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.toolbar button:hover {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.05
+  ); /* 示例：使背景色变深一点，您可以根据需要调整此值 */
+  cursor: pointer; /* 改变鼠标指针为手型，提升用户体验 */
+}
+.toolContainer {
+  right: 10px;
+  position: absolute;
+  top: 6px;
+  height: 30px;
+  .closeButton {
+    margin-left: 10px;
+  }
+
+  .refreshButton {
+    // right: 48px;
+  }
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: -58px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  // height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #b7c6db;
+}
+.mobileUI {
+  .bubbleTip {
+    transform: scale(1.5) translate(-25%, 0);
+  }
+  .chatBoxContainer {
+    height: 1030px;
+    width: 650px;
+    bottom: 216px;
+    right: 50px;
+  }
+  .toolbar {
+    height: 126px;
+    .avatarContainer {
+      width: 162px;
+      height: 118px;
+      .chatbotAvatar {
+        width: 162px;
+        height: 100px;
+      }
+    }
+    .nameContainer {
+      top: 78px;
+      left: 182px;
+      .iconText {
+        width: 52px;
+        height: 36px;
+      }
+      .chatbotName {
+        font-size: 30px;
+      }
+    }
+    button {
+      width: 52px;
+      height: 52px;
+    }
+    // .refreshButton {
+    //   right: 88px;
+    // }
+    .toolContainer {
+      right: 10px;
+      .closeButton {
+      }
+
+      .refreshButton {
+        // right: 48px;
+      }
+    }
+  }
+  .disclaimer {
+    font-size: 22px;
+    bottom: -120px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}
