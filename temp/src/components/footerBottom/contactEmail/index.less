@@ -1,0 +1,43 @@
+.footer-contactUs-container {
+  font-size: 0.2rem;
+  .contactUs-row {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 0.4rem;
+    .left {
+      display: flex;
+      flex-direction: column;
+    }
+    .right {
+      width: 0.66rem;
+      height: 0.66rem;
+      margin-left: 0.24rem;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.mobileUI {
+  .footer-contactUs-container {
+    font-size: 0.32rem;
+    .contactUs-row {
+      margin-bottom: 0.52rem;
+      .left {
+        .name {
+          color: #999999;
+          margin-bottom: 0.33rem;
+        }
+      }
+      .right {
+        width: 1.36rem;
+        height: 1.36rem;
+        margin-left: 1.28rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

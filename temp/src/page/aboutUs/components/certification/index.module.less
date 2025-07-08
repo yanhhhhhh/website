@@ -1,0 +1,210 @@
+.certification {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8rem;
+    width: 100vw;
+    position: relative;
+    background-color: #000;
+
+    .bg {
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100vw;
+      display: flex;
+      object-fit: fill;
+      object-position: center;
+    }
+
+    .content {
+      width: calc(100vw - 3.6rem * 2);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-between;
+
+      .left {
+        color: #fff;
+        text-align: left;
+        .title {
+          font-size: 0.48rem;
+          line-height: 0.88rem;
+
+          margin-bottom: 0.4rem;
+        }
+        .desc {
+          font-size: 0.2rem;
+          line-height: 1.2;
+          margin-bottom: 0.71rem;
+        }
+        .certification {
+          h4 {
+            font-size: 0.2rem;
+            margin-bottom: 20px;
+          }
+          .element {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.58rem;
+
+            img {
+              width: 0.94rem;
+              height: 0.94rem;
+              margin-right: 10px;
+            }
+            img[alt='厦门工厂碳中和认证'] {
+              width: 1.52rem;
+              height: 0.86rem;
+            }
+            &__descriptions {
+              display: flex;
+              flex-direction: column;
+              font-weight: 500;
+              p:nth-child(2) {
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        // bottom: 0;
+        align-self: flex-end;
+        &-image {
+          width: 6.72rem;
+          height: 4.9rem;
+        }
+      }
+    }
+  }
+}
+.enUI {
+  .en.certification {
+    section {
+      .content {
+        padding: 0.4rem;
+        .left {
+          .certification {
+            h4 {
+              line-height: 1.2;
+              font-size: 0.28rem;
+            }
+            .element {
+              margin-bottom: 0.28rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.mobileUI {
+  .en.certification {
+    section {
+      .content {
+        padding: 0.4rem;
+        .left {
+          .certification {
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
+  .certification {
+    section {
+      display: block;
+
+      width: 100vw;
+      height: 10.2rem;
+      position: relative;
+
+      .bg {
+        // height: 10.2rem;
+      }
+
+      .content {
+        width: 100%;
+        padding: 0.8rem 0.4rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: unset;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .left {
+          color: #fff;
+          text-align: left;
+
+          .title {
+            font-size: 0.48rem;
+            line-height: 0.88rem;
+
+            margin-bottom: 0.2rem;
+          }
+          .desc {
+            font-size: 0.3rem;
+            line-height: 1.2;
+            margin-bottom: 0.4rem;
+          }
+          .certification-wrap {
+            display: flex;
+            justify-content: space-between;
+          }
+          .certification {
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+            h4 {
+              font-size: 0.3rem;
+              margin-bottom: 0.2rem;
+            }
+            .element {
+              display: flex;
+              align-items: center;
+              font-size: 0.2rem;
+              margin-bottom: 0.58rem;
+
+              img {
+                width: 0.94rem;
+                height: 0.94rem;
+                margin-right: 6px;
+              }
+              img[alt='厦门工厂碳中和认证'] {
+                width: 1.82rem;
+                height: 0.94rem;
+              }
+              &__descriptions {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+        }
+        .right {
+          &-image {
+            width: 6.7rem;
+            height: 4.8rem;
+          }
+
+          // position: absolute;
+          // bottom: 0.8rem;
+          // left: 50%;
+          // transform: translateX(-50%);
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+  .enUI;
+}

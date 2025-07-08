@@ -1,0 +1,53 @@
+.region-list-container {
+  background: #080a0e;
+  color: #fff;
+  padding: 0.8rem 0.5rem;
+  position: relative;
+  z-index: 1001;
+  .title {
+    font-size: 0.4rem;
+    margin-bottom: 0.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .region-list {
+    display: block;
+    .region-item {
+      margin-bottom: 0.8rem;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .country-item {
+    font-size: 0.32rem;
+    margin-bottom: 0.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .country {
+      margin-right: 0.2rem;
+    }
+  }
+}
+.mobileUI() {
+  .region-list-container {
+    .title {
+      font-size: 0.32rem;
+    }
+    .region-list {
+      .region-item {
+        color: #5f5f5f;
+      }
+    }
+    .country-item {
+      font-size: 0.28rem;
+      color: #fff;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

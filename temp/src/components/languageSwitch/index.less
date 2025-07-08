@@ -1,0 +1,123 @@
+.boxWraper {
+  font-size: 0.18rem !important;
+
+  &.longBoxWrapper {
+    // width: calc(290 / 1920 * 100vw);
+
+    .label {
+      color: #ffffff;
+      .chooseCountry {
+      }
+      // width: calc(180 / 1920 * 100vw);
+    }
+  }
+
+  .ballWraper {
+    font-size: 0.18rem !important;
+  }
+}
+
+.lanIcon {
+  font-size: 0.24rem;
+  margin-right: 0.1rem;
+  cursor: pointer;
+}
+.pcRegionList {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  // top: @navigation-height-pc;
+  padding: 0.4rem 0 0.64rem;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.8s ease-in-out;
+  // transform: translateY(@navigation-height-pc);
+  z-index: 20;
+  .region-list-container {
+    background-color: #fff;
+    color: #000;
+    .select-region {
+      font-weight: 500;
+      font-size: 0.28rem;
+      margin-bottom: 0.28rem;
+    }
+    .region-list {
+      display: flex;
+      .region-item {
+        margin-right: 1.64rem;
+        .region-title {
+          font-size: 0.2rem;
+        }
+        .country-item {
+          cursor: pointer;
+          margin-bottom: 0.2rem;
+          font-size: 0.16rem;
+
+          .language {
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.show {
+  opacity: 1;
+  transform: translateY(calc(@navigation-height-pc));
+}
+.hide {
+  opacity: 0;
+  transform: translateY(calc(-@navigation-height-pc - 100%));
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .lanIcon {
+    font-size: 0.36rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .lanIcon {
+    font-size: 0.4rem;
+  }
+}
+
+.tabletUI() {
+}
+
+.mobileUI() {
+  .boxWraper {
+    font-size: 0.32rem !important;
+    &.longBoxWrapper {
+      // width: 100%;
+      .label {
+        color: #999999;
+        .chooseCountry {
+          font-size: 0.32rem;
+        }
+        // width: calc(180 / 1920 * 100vw);
+      }
+    }
+
+    .ballWraper {
+      font-size: 0.32rem !important;
+    }
+  }
+}
+
+// ipad 竖屏
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

@@ -1,0 +1,54 @@
+.backBtn {
+  width: 0.69rem;
+  height: 0.69rem;
+  background-color: rgba(216, 216, 216, 0.2);
+  border-radius: 50%;
+  cursor: pointer;
+
+  position: fixed;
+  top: 1.04rem;
+  left: 0.65rem;
+  z-index: 99;
+
+  .icon {
+    font-size: 0.36rem;
+    color: #fff;
+  }
+}
+
+.tabletUI() {
+}
+
+.mobileUI() {
+  .backBtn {
+    width: 0.38rem;
+    height: 0.38rem;
+
+    top: 0.72rem;
+    left: 0.17rem;
+
+    .icon {
+      font-size: 0.24rem;
+    }
+  }
+}
+
+// ipad 竖屏
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}
+
+@media only screen and (device-width: 375px) {
+  .backBtn {
+    width: 0.3rem;
+    height: 0.3rem;
+
+    left: 0.17rem;
+
+    .icon {
+      font-size: 0.18rem;
+    }
+  }
+}

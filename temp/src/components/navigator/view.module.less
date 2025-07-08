@@ -1,0 +1,136 @@
+.underline-style {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+  left: 0;
+  bottom: 0.02rem;
+  transition: width 0.3s;
+}
+
+.header {
+  width: 100vw;
+  height: @navigation-height-pc;
+  background-color: #080a0e;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1002;
+  display: flex;
+  justify-content: center;
+
+  .nav {
+    width: fit-content;
+    min-width: @main-width;
+    height: @navigation-height-pc;
+
+    color: #fff;
+
+    box-sizing: border-box;
+
+    .logo {
+      width: 1.5rem;
+      height: 0.6rem;
+      position: relative;
+      cursor: pointer;
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    .navList {
+      margin-left: 0.4rem;
+      min-width: 5.6rem;
+      .navItem {
+        padding: 0 0.4rem;
+      }
+      .navItem,
+      .navListItem {
+        font-family: Source Han Sans;
+        font-size: 0.18rem;
+        font-weight: 500;
+        line-height: @navigation-height-pc;
+        color: #ffffff;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+          .underline-style;
+        }
+        &-active {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .productDropdown {
+      width: 100vw;
+      height: 2.33rem;
+      position: absolute;
+      // top: @navigation-height-pc;
+      top: 0;
+      left: 0;
+
+      z-index: 600;
+      transition: all 0.8s ease-in;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(calc(@navigation-height-pc));
+    }
+    .hide {
+      opacity: 0;
+      transform: translateY(calc(-@navigation-height-pc - 100%));
+      z-index: -1;
+    }
+  }
+}
+
+// ipad 竖屏
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .header {
+    height: @navigation-height-mobile;
+
+    .nav {
+      min-width: unset;
+      width: 100vw;
+      padding: 0.2rem;
+      height: @navigation-height-mobile;
+      .mobile {
+        .logo {
+          width: 1.72rem;
+          height: 0.41rem;
+
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .navList {
+        margin-left: 0px;
+        min-width: unset;
+
+        .navItem {
+          font-family: Source Han Sans;
+          font-size: 11px;
+          font-weight: 500;
+          line-height: 11px;
+          color: #ffffff;
+        }
+      }
+
+      .top-bar {
+        font-size: 0.28rem;
+        cursor: pointer;
+      }
+    }
+  }
+}

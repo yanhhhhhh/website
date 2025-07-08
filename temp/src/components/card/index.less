@@ -1,0 +1,67 @@
+.hero-card {
+  display: flex;
+
+  justify-content: center;
+
+  &-content {
+    margin-top: 0.46rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-title {
+    font-size: 0.46rem;
+    line-height: 1.5;
+  }
+  &-description {
+    font-size: 0.24rem;
+  }
+  &-more {
+    font-size: 0.22rem;
+    line-height: 1.5;
+    color: @color-primary;
+    margin-top: 0.1rem;
+    cursor: pointer;
+  }
+}
+.mobileUI {
+  .hero-card {
+    &-content {
+      margin-top: 0.4rem;
+    }
+    &-title {
+      font-size: 0.58rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    &-description {
+      font-size: 0.4rem;
+      font-weight: 300;
+      text-align: center;
+    }
+    &-more {
+      font-size: 0.32rem;
+      margin-top: 0.2rem;
+    }
+  }
+  .en {
+    .hero-card {
+      &-content {
+        line-height: 1.2;
+      }
+      &-title {
+        line-height: 1.2;
+        font-size: 0.48rem;
+      }
+      &-description {
+        margin-top: 0.1rem;
+
+        line-height: 1.2;
+        font-size: 0.32rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

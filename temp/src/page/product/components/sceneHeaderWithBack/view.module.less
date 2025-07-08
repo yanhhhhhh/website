@@ -1,0 +1,37 @@
+.sceneTitle {
+  position: relative;
+  > h1 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.44rem;
+    line-height: 1.2045;
+    letter-spacing: 2px;
+  }
+}
+
+.mobileUI() {
+  .sceneTitle {
+    width: 100%;
+    > h1 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.28rem;
+      line-height: 1.178;
+      letter-spacing: 1px;
+    }
+  }
+}
+
+// ipad 竖屏
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+}
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}
+
+@media only screen and (max-width: 375px) {
+  .subscriptions {
+  }
+}

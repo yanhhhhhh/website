@@ -1,0 +1,82 @@
+.HeroEE1BigCapacity {
+  .devices {
+    margin-top: 0.43rem;
+    width: 3.4rem;
+    height: 5.4rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0.4rem 0.4rem;
+    align-content: space-between;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    .device-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: s;
+      width: 50%;
+
+      img {
+        width: 0.5rem;
+        height: 0.5rem;
+        margin-bottom: 0.1rem;
+      }
+      &-bottom {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        h5 {
+          font-size: 0.16rem;
+          line-height: 1.2;
+          color: #8e8e8e;
+          margin-bottom: 0.08rem;
+          text-align: center;
+        }
+        p {
+          font-size: 0.22rem;
+          color: #ffffff;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.mobileUI {
+  .HeroEE1BigCapacity {
+    .devices {
+      margin-top: 0.42rem;
+      width: 6rem;
+      height: 3.3rem;
+      padding: 0.2rem 1rem;
+
+      align-items: center;
+
+      .device-container {
+        width: 33.3%;
+
+        height: 45%;
+        justify-content: flex-start;
+        &-bottom {
+          justify-content: space-between;
+        }
+      }
+      // .feature-container {
+      //   width: 1.64rem;
+      // }
+    }
+  }
+  .en.HeroEE1BigCapacity {
+    .devices {
+      height: 3.6rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI();
+}

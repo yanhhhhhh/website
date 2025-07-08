@@ -1,0 +1,33 @@
+.subBtn {
+  width: 2.33rem !important;
+  height: 0.64rem !important;
+  font-size: 0.26rem !important;
+  font-weight: 400 !important;
+  border-radius: 0.08rem !important;
+  border-width: 3px !important;
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+.tabletUI() {
+}
+
+.mobileUI() {
+  .subBtn {
+    font-size: 0.18rem !important;
+    margin-top: 0.36rem !important;
+    width: 84.3% !important;
+    height: 0.44rem !important;
+    background-color: transparent !important;
+    color: #fff !important;
+    border-radius: 0.04rem !important;
+    border-width: 1px !important;
+  }
+}
+
+// ipad 竖屏
+
+// 手机 小屏幕 平板
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

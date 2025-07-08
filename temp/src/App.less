@@ -1,0 +1,15 @@
+#root {
+  margin: 0 auto;
+}
+.app {
+  margin-top: @navigation-height-pc;
+
+  width: 100vw;
+  overflow-y: auto;
+  // position: relative;
+}
+@media screen and (max-width: 1024px) {
+  .app {
+    margin-top: @navigation-height-mobile;
+  }
+}

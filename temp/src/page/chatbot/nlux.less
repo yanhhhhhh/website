@@ -1,0 +1,185 @@
+.nlux-AiChat-root {
+  --nlux-chtr--ftSz: 12px;
+  --nlux-prmInp--ftFm: 14px;
+}
+.nlux-AiChat-root.nlux-theme-nova {
+  --nlux-PromptInput--FontSize: 14px;
+
+  // --nlux-send-icon: url('./AI-send.svg');
+  min-width: unset !important;
+}
+.nlux-AiChat-root > .nlux-chatRoom-container {
+  border: none;
+  width: 100%;
+  border-radius: 0 0 16px 16px;
+  background: linear-gradient(180deg, #e1eafb 4.99%, #f0f8fd);
+  padding: 12px 16px 0;
+  box-sizing: border-box;
+  margin-top: -2px;
+  .nlux-launchPad-container > .nlux-comp-welcomeMessage {
+    height: unset;
+    flex: unset;
+    justify-content: start;
+    align-items: unset;
+  }
+}
+
+.nlux-comp-welcomeMessage > .nlux-comp-welcomeMessage-personaName {
+  font-size: 26px;
+  background: linear-gradient(270deg, #ae79cc 3%, #1366ec 96%);
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.nlux-comp-welcomeMessage > .nlux-comp-welcomeMessage-text {
+  margin-top: 16px;
+  color: #666;
+}
+.nlux-conversationStarters-container > .nlux-comp-conversationStarters {
+  display: block;
+  // padding: 0 26px 0 26px;
+  min-width: inherit;
+  width: inherit;
+}
+.nlux-conversationStarters-container
+  > .nlux-comp-conversationStarters
+  button.nlux-comp-conversationStarter {
+  height: auto;
+  width: auto;
+  margin-bottom: 12px;
+  border-radius: 0;
+  font-size: 12px;
+  color: #151925;
+  background-color: unset;
+  span.nlux-comp-conversationStarter-prompt {
+    line-height: 1.3;
+  }
+}
+
+.nlux-AiChat-root > .nlux-chatRoom-container > .nlux-composer-container {
+  border-top: 0;
+
+  margin-bottom: 40px;
+  min-height: 46px;
+}
+.nlux-comp-composer {
+  > textarea {
+    padding: 14px;
+    font-size: 18px;
+  }
+  > textarea,
+  > textarea:focus,
+  > textarea:hover {
+    background-color: #fff;
+  }
+}
+.nlux-comp-composer > textarea:disabled,
+.nlux-comp-composer > textarea:disabled:hover {
+  background-color: #fff;
+}
+.nlux-comp-composer > textarea:placeholder {
+  color: #eee;
+}
+.nlux-comp-composer > button {
+  width: 40px;
+}
+.nlux-comp-chatItem.nlux-comp-chatItem--bubblesLayout.nlux-comp-chatItem--sent {
+  flex-direction: column;
+  > .nlux-comp-message {
+    border-radius: 8px;
+    background-color: #1761ff;
+    color: #fff;
+  }
+}
+.nlux-comp-chatItem.nlux-comp-chatItem--sent
+  > .nlux-comp-chatItem-participantInfo
+  > .nlux-comp-avatar
+  > .nlux-comp-avatarContainer
+  > .nlux-comp-avatarPicture {
+  background-color: transparent;
+}
+.nlux-comp-chatItem.nlux-comp-chatItem--bubblesLayout.nlux-comp-chatItem--received {
+  padding-right: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  > .nlux-comp-message {
+    border-radius: 8px;
+    background-color: #fff;
+    color: #555;
+  }
+}
+
+.nlux-AiChat-root
+  > .nlux-chatRoom-container:not(.nlux-chatRoom-starting)
+  > .nlux-conversation-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nlux-conversation-container img {
+  max-width: 100%;
+}
+
+.nlux-conversation-container th,
+.nlux-conversation-container td {
+  padding: 4px;
+  border: 1px solid #ccc;
+}
+.nlux-comp-composer
+  > button
+  > .nlux-comp-sendIcon
+  > .nlux-comp-sendIcon-container {
+  background-color: unset;
+  mask: unset;
+  background-image: url('./icon/ai-send.svg');
+}
+.nlux-comp-composer
+  > button:disabled
+  > .nlux-comp-sendIcon
+  > .nlux-comp-sendIcon-container {
+  background-color: unset;
+  mask: unset;
+  background-image: url('./icon/ai-unsend.svg');
+}
+
+.mobileUI {
+  .nlux-AiChat-root {
+    --nlux-chtr--ftSz: 28px;
+    --nlux-prmInp--ftFm: 14px;
+  }
+  .nlux-AiChat-root.nlux-theme-nova {
+    --nlux-PromptInput--FontSize: 28px;
+
+    // --nlux-send-icon: url('./AI-send.svg');
+  }
+  .nlux-AiChat-root > .nlux-chatRoom-container {
+    padding: 20px 20px 0;
+    box-sizing: border-box;
+    margin-top: -2px;
+  }
+  .nlux-comp-composer {
+    height: 74px;
+    > textarea {
+      padding: 22px;
+      font-size: 30px;
+    }
+  }
+  .nlux-AiChat-root > .nlux-chatRoom-container > .nlux-composer-container {
+    margin-bottom: 48px;
+    min-height: unset;
+  }
+  .nlux-comp-composer > button {
+    width: 56px;
+  }
+  .nlux-comp-avatar,
+  .nlux-comp-composer
+    > button
+    > .nlux-comp-sendIcon
+    > .nlux-comp-sendIcon-container {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

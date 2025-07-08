@@ -1,0 +1,37 @@
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 122px;
+  z-index: 100;
+  &-icon-wrap {
+    width: 0.64rem;
+    height: 0.64rem;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 0.16rem 0 rgba(0, 0, 0, 0.1);
+    .back-to-top-icon {
+      font-size: 0.18rem;
+      font-weight: 700;
+      width: 0.25rem;
+      height: 0.32rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .back-to-top {
+    right: 0.16rem;
+    bottom: 2rem;
+    &-icon-wrap {
+      width: 0.64rem;
+      height: 0.64rem;
+    }
+    &-icon {
+      // width: 0.64rem;
+      // height: 0.64rem;
+    }
+  }
+}

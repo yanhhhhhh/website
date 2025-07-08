@@ -1,0 +1,229 @@
+.HeroEE1-feature {
+  &-wrapper {
+    padding: 1.39rem 0;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+  }
+  &-content {
+    position: relative;
+    height: 5.28rem;
+    width: 8.8rem;
+    .card {
+      position: absolute;
+      color: #fff;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .title {
+      font-size: 0.28rem;
+    }
+    .description {
+      font-size: 0.18rem;
+    }
+    .electricCore {
+      width: 3.58rem;
+      height: 2.52rem;
+      top: 0;
+      left: 0;
+      padding: 0.16rem 0.24rem;
+    }
+    .capacity {
+      width: 5.14rem;
+      height: 2.52rem;
+      left: 3.68rem;
+      top: 0;
+      padding: 0.16rem 0.24rem;
+    }
+    .intelligentAPPControl {
+      width: 2.52rem;
+      height: 2.66rem;
+      left: 0;
+      top: 2.62rem;
+      color: #000;
+      text-align: center;
+      padding-top: 0.15rem;
+      .title {
+        color: #fff;
+        font-size: 0.2rem;
+      }
+    }
+    .supportsSolarCharging {
+      width: 3.58rem;
+      height: 1.32rem;
+      left: 2.62rem;
+      top: 2.62rem;
+      padding: 0.13rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      .title {
+        font-size: 0.16rem;
+        text-align: end;
+      }
+    }
+    .intelligentManagement {
+      width: 1.74rem;
+      height: 1.24rem;
+      top: 4.04rem;
+      left: 2.62rem;
+      padding: 0.16rem;
+      .title {
+        font-size: 0.2rem;
+      }
+    }
+    .longWarranty {
+      width: 1.74rem;
+      height: 1.24rem;
+      top: 4.04rem;
+      left: 4.46rem;
+      padding: 0 0.66rem;
+      display: flex;
+      align-items: center;
+      .title {
+        font-size: 0.2rem;
+      }
+    }
+    .portableAndConvenient {
+      width: 2.52rem;
+      height: 2.66rem;
+      right: 0;
+      bottom: 0;
+      padding: 0.2rem;
+    }
+  }
+}
+
+.mobileUI {
+  .HeroEE1-feature {
+    &-wrapper {
+      padding: 0.35rem;
+      width: 100vw;
+      box-sizing: border-box;
+    }
+    &-content {
+      position: relative;
+      height: 10.7rem;
+      width: 100%;
+
+      .title {
+        font-size: 0.32rem;
+      }
+      .description {
+        font-size: 0.28rem;
+      }
+      .electricCore {
+        width: 4.2rem;
+        height: 5.68rem;
+        top: 0;
+        left: 0;
+        padding: 0.21rem 0 0.21rem 0.48rem;
+      }
+      .capacity {
+        width: 2.4rem;
+        height: 3.31rem;
+        right: 0;
+        left: unset;
+        top: 0;
+        padding: 0.2rem;
+      }
+      .intelligentAPPControl {
+        width: 3.34rem;
+        height: 2.66rem;
+        left: 0;
+
+        bottom: 0;
+        top: unset;
+        color: #fff;
+        text-align: left;
+
+        padding: 0.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+      }
+      .supportsSolarCharging {
+        width: 4.2rem;
+        height: 1.96rem;
+        left: 0;
+        top: 5.88rem;
+        padding: 0.13rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        .title {
+          font-size: 0.28rem;
+          text-align: end;
+          position: absolute;
+          bottom: 0.13rem;
+          right: 0.13rem;
+        }
+      }
+      .intelligentManagement {
+        width: 2.4rem;
+        height: 2.17rem;
+        top: 3.51rem;
+        left: unset;
+        right: 0;
+        padding: 0.16rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        .title {
+          font-size: 0.32rem;
+        }
+      }
+      .longWarranty {
+        width: 2.4rem;
+        height: 1.96rem;
+        top: unset;
+        bottom: 2.86rem;
+        left: unset;
+        right: 0;
+        padding: 0 0.88rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .title {
+          font-size: 0.3rem;
+          text-align: center;
+        }
+      }
+      .portableAndConvenient {
+        width: 3.24rem;
+        height: 2.66rem;
+        right: 0;
+        bottom: 0;
+        padding: 0.2rem;
+      }
+    }
+  }
+  .HeroEE1-feature {
+    &-wrapper.en {
+      .HeroEE1-feature-content {
+        .title {
+          font-size: 0.26rem;
+          line-height: 1;
+        }
+        .description {
+          font-size: 0.22rem;
+        }
+        .longWarranty {
+          padding: 0 0.2rem;
+          .title {
+            font-size: 0.22rem;
+            line-height: 1;
+            text-align: center;
+            margin-top: -0.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

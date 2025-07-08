@@ -1,0 +1,125 @@
+.underline-style {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 4px;
+  left: 0;
+  bottom: 0.02rem;
+  transition: width 0.3s;
+}
+.hero-nav-dropdown-container.nav-title {
+  position: relative;
+  &::after {
+    .underline-style;
+  }
+  &.active {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+.hero-dropdown-trigger.nav-title {
+  font-size: 0.18rem;
+  position: relative;
+  font-weight: 500;
+  padding: 0 0.4rem;
+  &::after {
+    .underline-style;
+  }
+  &.active {
+    &::after {
+      width: 100%;
+    }
+  }
+}
+.nav-dropdown.hero-dropdown {
+  .hero-dropdown-menu {
+    width: 100vw;
+
+    display: flex;
+    border-radius: 0 !important;
+    justify-content: center;
+    margin-top: -0.05rem;
+
+    .nav-dropdown-title {
+      position: relative;
+      &::after {
+        .underline-style;
+      }
+      .active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    li.hero-dropdown-menu-item {
+      padding: 0.32rem 0.6rem;
+      font-size: 0.2rem;
+      .image-item {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0;
+        }
+        img {
+          margin-bottom: 0.13rem;
+        }
+        h3 {
+          font-size: 0.2rem;
+        }
+        p {
+          color: #666666;
+          font-size: 0.14rem;
+        }
+      }
+
+      .nav-dropdown-item {
+        text-align: center;
+        color: #000;
+      }
+      .nav-dropdown-item.active {
+        color: @color-primary;
+      }
+    }
+  }
+}
+.nav-dropdown.hero-dropdown.product-dropdown {
+  .hero-dropdown-menu {
+    height: 3.36rem;
+    padding: 0.32rem 0 0.57rem;
+    li.hero-dropdown-menu-item {
+      align-items: end;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+      .product-item {
+        margin-right: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        &:last-child {
+          margin-right: 0;
+        }
+        img {
+          margin-bottom: 0.13rem;
+        }
+        h3 {
+          font-size: 0.2rem;
+        }
+        p {
+          color: #666666;
+          font-size: 0.14rem;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1180px) and (orientation: landscape) {
+}

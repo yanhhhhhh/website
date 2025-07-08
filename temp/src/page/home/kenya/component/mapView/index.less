@@ -1,0 +1,117 @@
+.kenya-map-view {
+  width: 100vw;
+  height: 8rem;
+  position: relative;
+  .kenya-contact-table {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.7rem;
+    color: #fff;
+
+    table {
+      border-collapse: collapse;
+      width: 8.3rem;
+    }
+    th,
+    td {
+      padding: 0.04rem 0.06rem;
+      user-select: text;
+      -webkit-user-select: text; /* 对于 iOS 和 Safari 浏览器 */
+      -moz-user-select: text; /* 对于 Firefox 浏览器 */
+      -ms-user-select: text; /* 对于旧版本的 Internet Explorer */
+    }
+    caption {
+      font-size: 0.24rem;
+      line-height: 2;
+      text-align: left;
+    }
+    thead {
+      background-color: #121212;
+      text-align: left;
+
+      tr {
+        font-size: 0.12rem;
+        th:first-child {
+          width: 2.25rem;
+        }
+        // 第二个th
+        th:nth-child(2) {
+          width: 1.13rem;
+        }
+        th:nth-child(3) {
+          width: 1.06rem;
+        }
+        th:nth-child(4) {
+          width: 0.64rem;
+        }
+        th:last-child {
+          width: 3.25rem;
+        }
+      }
+    }
+    tbody {
+      border: 1px solid #595959;
+      tr {
+        font-size: 0.1rem; /* 基础字体大小 */
+
+        border: 1px solid #595959;
+        td {
+          border-right: 1px solid #595959;
+        }
+      }
+    }
+  }
+}
+.mobileUI {
+  .kenya-map-view {
+    height: 28.5rem;
+    .kenya-contact-table {
+      right: unset;
+      transform: scale(1);
+
+      top: 13rem;
+      padding: 0 0.2rem;
+      width: 100%;
+
+      table {
+        width: 100%;
+      }
+      caption {
+        font-size: 0.3rem;
+        text-align: center;
+      }
+      thead {
+        tr {
+          font-size: 0.16rem;
+          th:first-child {
+            width: 1.38rem;
+          }
+          // 第二个th
+          th:nth-child(2) {
+            width: 1.33rem;
+          }
+          th:nth-child(3) {
+            width: 1.12rem;
+          }
+          th:nth-child(4) {
+            width: 0.77rem;
+          }
+          th:last-child {
+            width: 2.39rem;
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            font-size: 0.16rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

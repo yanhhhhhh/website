@@ -1,0 +1,195 @@
+.welcomeMessageContainer {
+  .text {
+    color: #545b73;
+    font-size: 14px;
+  }
+}
+.toolContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .container {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 0;
+    border-radius: 8px;
+    margin-top: 14px;
+    cursor: pointer;
+    .icon {
+      width: 34px;
+      height: 34px;
+      margin-right: 8px;
+    }
+    .text {
+      font-size: 16px;
+      line-height: 1;
+      color: #151925;
+      font-weight: 700;
+      max-width: 96px;
+    }
+  }
+}
+
+.commonQuestionsContainer {
+  display: flex;
+  margin-top: 14px;
+  flex-direction: column;
+  background: #f3f8ff;
+  border-radius: 8px;
+  padding: 14px;
+  overflow: scroll;
+  max-height: 420px;
+
+  .text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #151925;
+    margin-bottom: 14px;
+  }
+  .commonQuestions {
+    background: #ffffff;
+    border-radius: 7px;
+
+    .commonQuestion {
+      padding-inline: 0;
+      padding-block: 0;
+      padding-left: 14px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      line-height: 1.2;
+      border: 0;
+      font-size: 16px;
+      text-align: left;
+      border-bottom: 1px solid #efefef;
+      cursor: pointer;
+      min-height: 34px;
+      background-color: transparent;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  .en.commonQuestions {
+    .commonQuestion {
+      line-height: 1.4;
+    }
+  }
+}
+
+.stopButton {
+  padding: 0;
+  height: 40px;
+  width: 44px;
+  position: absolute;
+  display: flex;
+  border-radius: 50%;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+  right: 10px;
+  bottom: -20px;
+
+  svg {
+    box-sizing: border-box;
+    position: relative;
+
+    bottom: 0;
+
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.mobileUI {
+  .welcomeMessageContainer {
+    .text {
+      font-size: 26px;
+    }
+  }
+  .toolContainer {
+    .container {
+      padding: 20px 0;
+
+      margin-top: 24px;
+
+      .icon {
+        width: 62px;
+        height: 62px;
+        margin-right: 12px;
+      }
+      .text {
+        font-size: 28px;
+        max-width: 168px;
+      }
+    }
+  }
+
+  .commonQuestionsContainer {
+    display: flex;
+    margin-top: 24px;
+
+    padding: 22px;
+
+    max-height: 690px;
+
+    .text {
+      font-size: 28px;
+
+      margin-bottom: 24px;
+    }
+    .commonQuestions {
+      .commonQuestion {
+        padding: 8px 14px;
+        line-height: 2;
+        border-bottom: 1px solid #efefef;
+        cursor: pointer;
+        min-height: 52px;
+        font-size: 28px;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    .en.commonQuestions {
+      .commonQuestion {
+        line-height: 1.3;
+      }
+    }
+  }
+  .stopButton {
+    padding: 0;
+    height: 64px;
+    width: 60px;
+    position: absolute;
+    display: flex;
+    border-radius: 50%;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    right: 10px;
+    bottom: -60px;
+
+    svg {
+      box-sizing: border-box;
+      position: relative;
+
+      bottom: 0;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

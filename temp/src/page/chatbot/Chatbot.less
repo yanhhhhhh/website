@@ -1,0 +1,18 @@
+// module.less 无法修改antd-mobile 的样式
+.commonQuestionsContainer {
+  .adm-tabs {
+    --title-font-size: 18px;
+    margin-bottom: 8px;
+  }
+}
+.mobileUI {
+  .commonQuestionsContainer {
+    .adm-tabs {
+      --title-font-size: 28px;
+      margin-bottom: 20px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .mobileUI;
+}

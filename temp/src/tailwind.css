@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.list-item::marker{
+  display: none;
+ 
+  font-size: 0;
+}

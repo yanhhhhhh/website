@@ -1,0 +1,82 @@
+services:  #4
+  - docker:dind
+  - command: ["--insecure-registry $GETECH_CI_REGISTRY"]
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_HOST: tcp://docker:2375  # docker host，本地可不写
+  DOCKER_TLS_CERTDIR: ""
+  VERSION_BASE: "1.0."
+  CI_IMAGE_TAG: $VERSION_BASE$CI_PIPELINE_IID
+  CI_REGISTRY_IMAGE: $GETECH_CI_REGISTRY/iot/${CI_PROJECT_NAME}
+  GIT_SSL_NO_VERIFY: "1"
+  #  KUBERNETES_MASTER:
+  #  KUBE_CONTEXT: ""
+  # The name to use for the new context
+  #  AGENT_ID: 8443 # replace with your agent's numeric ID
+  #  K8S_PROXY_URL:
+  # For agent server (KAS) deployed in Kubernetes cluster (for gitlab.com use kas.gitlab.com); replace with your URL
+  # K8S_PROXY_URL: https://<GITLAB_DOMAIN>/-/kubernetes-agent/k8s-proxy/ # For agent server (KAS) in Omnibus
+  # ... any other variables you have configured
+  # ====================以上禁止修改====================
+
+stages:
+  - build
+  - release
+
+build_vue:
+  stage: build
+  image: node:latest  # Specify the Node.js environment image here
+  script:
+    - echo '=========build vue========='
+    - ls -a
+    - npm install --registry=https://registry.npmmirror.com
+    - npm run build
+    - ls -a
+  cache:
+    paths:
+      - cache/node_modules/
+  artifacts:
+    paths:
+      - dist/  # Assuming the build output is in the 'dist' directory
+    expire_in: 3 days  # 构建产物保留3天
+  tags:
+    - product-intro
+  allow_failure: false
+  only:
+    - test
+  when: manual
+
+
+image_build:
+  stage: release
+  image:
+    name: docker:stable
+  services:
+    - docker:19.03.0-dind
+  before_script:
+    - echo '=========release========='
+    # - echo $GETECH_CI_REGISTRY_USER:$GETECH_CI_REGISTRY_PASSWORD:$GETECH_CI_REGISTRY
+    # - docker login -u $GETECH_CI_REGISTRY_USER -p $GETECH_CI_REGISTRY_PASSWORD $GETECH_CI_REGISTRY
+  script:
+    - echo $CI_REGISTRY_IMAGE:${CI_COMMIT_REF_NAME}-$CI_IMAGE_TAG
+    - ls -a
+    - ls -a /
+    - ls -a /home/nginx_dev01/
+    # - docker build --tag $CI_REGISTRY_IMAGE:${CI_COMMIT_REF_NAME}-$CI_IMAGE_TAG .
+    # - docker push $CI_REGISTRY_IMAGE:${CI_COMMIT_REF_NAME}-$CI_IMAGE_TAG
+    # - echo '=========deploy docker========='
+    # - docker rm -f ${CI_PROJECT_NAME} || true
+    # - docker run -d -p 9012:80 --name=${CI_PROJECT_NAME} $CI_REGISTRY_IMAGE:${CI_COMMIT_REF_NAME}-$CI_IMAGE_TAG
+    # - docker ps -a
+    # - echo '=========clear docker images========='
+    # - docker images
+    # - docker images --format '{{.Repository}}:{{.Tag}}' | grep "${CI_PROJECT_NAME}" | awk 'NR>2' | xargs docker rmi || true
+  tags:
+    - product-intro
+  allow_failure: false
+  only:
+    - test
+  # when: manual
+
+
