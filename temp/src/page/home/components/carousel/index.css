@@ -1,0 +1,22 @@
+.my-carousel div.hero-carousel .slick-dots-bottom {
+  bottom: 0.2rem;
+}
+.my-carousel div.hero-carousel .slick-dots li {
+  margin-inline: 8px;
+}
+.my-carousel div.hero-carousel .slick-dots li button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.my-carousel div.hero-carousel .slick-dots li.slick-active button {
+  background: var(--color-primary);
+  width: 0.24rem;
+  border-radius: 6px;
+}
+.my-carousel .hero-carousel .slick-next {
+  right: 8px;
+}
+.my-carousel .herocarousel .slick-prev {
+  left: 8px;
+}

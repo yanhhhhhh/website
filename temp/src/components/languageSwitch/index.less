@@ -27,14 +27,14 @@
   position: absolute;
   left: 0;
   top: 0;
-  // top: @navigation-height-pc;
+  // top: var(navigation-height-pc);
   padding: 0.4rem 0 0.64rem;
   background-color: #fff;
   color: #000;
   display: flex;
   justify-content: space-around;
   transition: all 0.8s ease-in-out;
-  // transform: translateY(@navigation-height-pc);
+  // transform: translateY(var(navigation-height-pc));
   z-index: 20;
   .region-list-container {
     background-color: #fff;
@@ -75,11 +75,11 @@
 }
 .show {
   opacity: 1;
-  transform: translateY(calc(@navigation-height-pc));
+  transform: translateY(calc(var(navigation-height-pc)));
 }
 .hide {
   opacity: 0;
-  transform: translateY(calc(-@navigation-height-pc - 100%));
+  transform: translateY(calc(-var(navigation-height-pc) - 100%));
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   .lanIcon {

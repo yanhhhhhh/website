@@ -1,0 +1,83 @@
+.submit__button {
+  font-size: 0.26rem;
+  line-height: 0.3rem;
+  border-radius: 8px;
+  border: 0.03rem solid #ffffff;
+  color: #fff;
+  padding: 0.16rem 0.62rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-align: center;
+  background-color: transparent;
+}
+.primary.submit__button:hover {
+  color: #fff;
+  border-color: #638dff;
+}
+.secondary.submit__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.submit__button.tertiary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.submit__button.quaternary {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+.submit__button.quaternary:hover,
+.submit__button.quaternary.active {
+  background-color: #fff;
+  color: #333;
+  font-weight: 700;
+}
+.mobileUI .submit__button {
+  font-size: 0.32rem;
+  line-height: 0.3rem;
+  border-radius: 8px;
+  border: 2px solid #ffffff;
+  padding: 0.24rem 0;
+  width: calc(100vw - 0.6rem * 2);
+  cursor: pointer;
+}
+.primary.mobileUI .submit__button:hover {
+  background-color: transparent;
+  color: #fff;
+  border-color: #638dff;
+}
+.mobileUI .submit__button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.mobileUI .submit__button.quaternary:hover {
+  background-color: unset;
+  color: unset;
+}
+@media screen and (max-width: 1024px) {
+  .submit__button {
+    font-size: 0.32rem;
+    line-height: 0.3rem;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    padding: 0.24rem 0;
+    width: calc(100vw - 0.6rem * 2);
+    cursor: pointer;
+  }
+  .primary.submit__button:hover {
+    background-color: transparent;
+    color: #fff;
+    border-color: #638dff;
+  }
+  .submit__button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  .submit__button.quaternary:hover {
+    background-color: unset;
+    color: unset;
+  }
+}

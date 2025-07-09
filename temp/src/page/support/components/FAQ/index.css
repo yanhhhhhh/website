@@ -1,0 +1,27 @@
+.support-faq-right .loadmore-list .loadmore-list-item {
+  margin-bottom: 0.24rem;
+}
+.support-faq-right .loadmore-list .loadmore-list-item__question {
+  font-weight: 700;
+  font-size: 0.18rem;
+  color: #3d3d3d;
+  line-height: 1.8;
+}
+.support-faq-right .loadmore-list .loadmore-list-item__answer {
+  font-size: 0.17rem;
+  color: #3d3d3d;
+}
+.support-faq-right__button {
+  font-size: 0.22rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+.support-faq-mobile__swiper {
+  margin-top: 0.24rem;
+}
+@media screen and (max-width: 1024px) {
+  .support-faq-right__button {
+    margin-top: 0.44rem;
+    margin-bottom: 0.7rem;
+  }
+}

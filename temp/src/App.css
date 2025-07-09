@@ -1,0 +1,13 @@
+#root {
+  margin: 0 auto;
+}
+.app {
+  margin-top: var(navigation-height-pc);
+  width: 100vw;
+  overflow-y: auto;
+}
+@media screen and (max-width: 1024px) {
+  .app {
+    margin-top: var(navigation-height-mobile);
+  }
+}

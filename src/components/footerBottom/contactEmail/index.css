@@ -1,0 +1,53 @@
+.footer-contactUs-container {
+  font-size: 0.2rem;
+}
+.footer-contactUs-container .contactUs-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 0.4rem;
+}
+.footer-contactUs-container .contactUs-row .left {
+  display: flex;
+  flex-direction: column;
+}
+.footer-contactUs-container .contactUs-row .right {
+  width: 0.66rem;
+  height: 0.66rem;
+  margin-left: 0.24rem;
+}
+.footer-contactUs-container .contactUs-row:last-child {
+  margin-bottom: 0;
+}
+.mobileUI .footer-contactUs-container {
+  font-size: 0.32rem;
+}
+.mobileUI .footer-contactUs-container .contactUs-row {
+  margin-bottom: 0.52rem;
+}
+.mobileUI .footer-contactUs-container .contactUs-row .left .name {
+  color: #999999;
+  margin-bottom: 0.33rem;
+}
+.mobileUI .footer-contactUs-container .contactUs-row .right {
+  width: 1.36rem;
+  height: 1.36rem;
+  margin-left: 1.28rem;
+}
+@media screen and (max-width: 1024px) {
+  .footer-contactUs-container {
+    font-size: 0.32rem;
+  }
+  .footer-contactUs-container .contactUs-row {
+    margin-bottom: 0.52rem;
+  }
+  .footer-contactUs-container .contactUs-row .left .name {
+    color: #999999;
+    margin-bottom: 0.33rem;
+  }
+  .footer-contactUs-container .contactUs-row .right {
+    width: 1.36rem;
+    height: 1.36rem;
+    margin-left: 1.28rem;
+  }
+}

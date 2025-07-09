@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import './index.less';
+// import './index.less';
 export interface ProductionCardProps {
   title: string;
   fontColor?: string;
@@ -48,7 +48,10 @@ export const ProductionCard = (pros: ProductionCardProps) => {
         className="production-card-content"
         style={{ color: fontColor, ...contentStyle }}
       >
-        <div className="production-card-title " style={titleStyle}>
+        <div
+          className="production-card-title text-[40px] lg:text-[32px]"
+          style={titleStyle}
+        >
           {t(title)}
         </div>
 

@@ -1,0 +1,42 @@
+.solar-panel-series {
+  padding: 0.36rem 0 1.58rem;
+  width: 12.5rem;
+  margin: 0 auto;
+}
+.solar-panel-series-title {
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 0.36rem;
+  text-align: center;
+}
+.solar-panel-series-production {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+.mobileUI .solar-panel-series {
+  padding: 0.2rem;
+  width: 100%;
+}
+.mobileUI .solar-panel-series-title {
+  display: none;
+}
+.mobileUI .solar-panel-series-production {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1024px) {
+  .solar-panel-series {
+    padding: 0.2rem;
+    width: 100%;
+  }
+  .solar-panel-series-title {
+    display: none;
+  }
+  .solar-panel-series-production {
+    display: flex;
+    flex-direction: column;
+  }
+}

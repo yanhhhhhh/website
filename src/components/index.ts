@@ -2,7 +2,6 @@ export * from './icons';
 
 export * from './languageSwitch';
 
-export { default as BackBtn } from './backBtn';
 export * from './suspenseWraper';
 
 export { default as Footer } from './footerBottom';

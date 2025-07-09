@@ -1,8 +1,9 @@
+'use client';
 import axios from 'axios';
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
 import { message } from '@/providers';
 
-const baseUrl = import.meta.env.VITE_APP_BASE_API;
+const baseUrl = process.env.VITE_APP_BASE_API;
 
 export type Result<T> = {
   code: number;

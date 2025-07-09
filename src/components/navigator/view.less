@@ -12,7 +12,7 @@
 
 .header {
   width: 100vw;
-  height: @navigation-height-pc;
+  height: var(navigation-height-pc);
   background-color: #080a0e;
   position: fixed;
   top: 0;
@@ -24,7 +24,7 @@
   .nav {
     width: fit-content;
     min-width: @main-width;
-    height: @navigation-height-pc;
+    height: var(navigation-height-pc);
 
     color: #fff;
 
@@ -52,7 +52,7 @@
         font-family: Source Han Sans;
         font-size: 0.18rem;
         font-weight: 500;
-        line-height: @navigation-height-pc;
+        line-height: var(navigation-height-pc);
         color: #ffffff;
         display: inline-block;
         position: relative;
@@ -72,7 +72,7 @@
       width: 100vw;
       height: 2.33rem;
       position: absolute;
-      // top: @navigation-height-pc;
+      // top: var(navigation-height-pc);
       top: 0;
       left: 0;
 
@@ -81,11 +81,11 @@
     }
     .show {
       opacity: 1;
-      transform: translateY(calc(@navigation-height-pc));
+      transform: translateY(calc(var(navigation-height-pc)));
     }
     .hide {
       opacity: 0;
-      transform: translateY(calc(-@navigation-height-pc - 100%));
+      transform: translateY(calc(-var(navigation-height-pc) - 100%));
       z-index: -1;
     }
   }
@@ -96,13 +96,13 @@
 // 手机 小屏幕 平板
 @media screen and (max-width: 1024px) {
   .header {
-    height: @navigation-height-mobile;
+    height: var(navigation-height-mobile);
 
     .nav {
       min-width: unset;
       width: 100vw;
       padding: 0.2rem;
-      height: @navigation-height-mobile;
+      height: var(navigation-height-mobile);
       .mobile {
         .logo {
           width: 1.72rem;

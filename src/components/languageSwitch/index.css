@@ -1,0 +1,94 @@
+.boxWraper {
+  font-size: 0.18rem !important;
+}
+.boxWraper.longBoxWrapper .label {
+  color: #ffffff;
+}
+.boxWraper .ballWraper {
+  font-size: 0.18rem !important;
+}
+.lanIcon {
+  font-size: 0.24rem;
+  margin-right: 0.1rem;
+  cursor: pointer;
+}
+.pcRegionList {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.4rem 0 0.64rem;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.8s ease-in-out;
+  z-index: 20;
+}
+.pcRegionList .region-list-container {
+  background-color: #fff;
+  color: #000;
+}
+.pcRegionList .region-list-container .select-region {
+  font-weight: 500;
+  font-size: 0.28rem;
+  margin-bottom: 0.28rem;
+}
+.pcRegionList .region-list-container .region-list {
+  display: flex;
+}
+.pcRegionList .region-list-container .region-list .region-item {
+  margin-right: 1.64rem;
+}
+.pcRegionList .region-list-container .region-list .region-item .region-title {
+  font-size: 0.2rem;
+}
+.pcRegionList .region-list-container .region-list .region-item .country-item {
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+  font-size: 0.16rem;
+}
+.pcRegionList .region-list-container .region-list .region-item .country-item .language {
+  color: #999999;
+}
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.show {
+  opacity: 1;
+  transform: translateY(calc(var(navigation-height-pc)));
+}
+.hide {
+  opacity: 0;
+  transform: translateY(calc(-var(navigation-height-pc) - 100%));
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .lanIcon {
+    font-size: 0.36rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .lanIcon {
+    font-size: 0.4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .boxWraper {
+    font-size: 0.32rem !important;
+  }
+  .boxWraper.longBoxWrapper .label {
+    color: #999999;
+  }
+  .boxWraper.longBoxWrapper .label .chooseCountry {
+    font-size: 0.32rem;
+  }
+  .boxWraper .ballWraper {
+    font-size: 0.32rem !important;
+  }
+}

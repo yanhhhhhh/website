@@ -1,0 +1,141 @@
+.HeroEE2Advantages {
+  width: 100vw;
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 0.6rem;
+}
+.HeroEE2Advantages .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.HeroEE2Advantages .top .title {
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #ffffff;
+  margin-bottom: 0.1rem;
+}
+.HeroEE2Advantages .top .desc {
+  font-weight: 350;
+  font-size: 0.24rem;
+  color: #ffffff;
+  margin-bottom: 0.98rem;
+}
+.HeroEE2Advantages .advantages {
+  display: flex;
+  justify-content: center;
+}
+.HeroEE2Advantages .advantages .advantage {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  color: #ffffff;
+}
+.HeroEE2Advantages .advantages .advantage .title,
+.HeroEE2Advantages .advantages .advantage .secondDescription {
+  font-weight: 350;
+  font-size: 0.2rem;
+}
+.HeroEE2Advantages .advantages .advantage .title {
+  margin-bottom: 0.07rem;
+}
+.HeroEE2Advantages .advantages .advantage .secondDescription {
+  margin-bottom: 0.21rem;
+}
+.HeroEE2Advantages .advantages .advantage .center {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.12rem;
+}
+.HeroEE2Advantages .advantages .advantage .center-number {
+  color: var(--color-primary);
+  font-size: 0.32rem;
+  font-weight: 900;
+}
+.HeroEE2Advantages .advantages .advantage .center-desc {
+  font-weight: 350;
+  font-size: 0.2rem;
+  margin-left: 0.1rem;
+  font-weight: 700;
+}
+.HeroEE2Advantages .advantages .first {
+  margin-right: 2.62rem;
+  display: flex;
+  flex-direction: column;
+}
+.HeroEE2Advantages .advantages .first .img {
+  width: 3.15rem;
+  height: 2.69rem;
+}
+.HeroEE2Advantages .advantages .second .img {
+  width: 2.63rem;
+  height: 2.44rem;
+}
+@media screen and (max-width: 1024px) {
+  .HeroEE2Advantages {
+    height: 14.14rem;
+    padding-top: 0.46rem;
+    box-sizing: border-box;
+  }
+  .HeroEE2Advantages .top .title {
+    font-size: 0.6rem;
+    margin-bottom: 0;
+  }
+  .HeroEE2Advantages .top .desc {
+    font-size: 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .HeroEE2Advantages .advantages {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .HeroEE2Advantages .advantages .advantage {
+    justify-content: center;
+    align-items: center;
+  }
+  .HeroEE2Advantages .advantages .advantage .title,
+  .HeroEE2Advantages .advantages .advantage .secondDescription {
+    font-size: 0.26rem;
+  }
+  .HeroEE2Advantages .advantages .advantage .text-wrap {
+    width: fit-content;
+  }
+  .HeroEE2Advantages .advantages .advantage .title {
+    margin-bottom: 0.09rem;
+  }
+  .HeroEE2Advantages .advantages .advantage .secondDescription {
+    margin-bottom: 0.4rem;
+  }
+  .HeroEE2Advantages .advantages .advantage .center {
+    margin-bottom: 0.17rem;
+  }
+  .HeroEE2Advantages .advantages .advantage .center-number {
+    font-size: 0.4rem;
+  }
+  .HeroEE2Advantages .advantages .advantage .center-desc {
+    font-size: 0.3rem;
+  }
+  .HeroEE2Advantages .advantages .first {
+    margin-right: 0;
+    margin-bottom: 0.78rem;
+    margin-left: 0;
+  }
+  .HeroEE2Advantages .advantages .first .img {
+    width: 4.12rem;
+    height: 2.9rem;
+    margin-left: 0;
+  }
+  .HeroEE2Advantages .advantages .second .img {
+    width: 3.08rem;
+    height: 3.2rem;
+    align-self: center;
+  }
+  .en.HeroEE2Advantages .top .desc {
+    font-size: 0.3rem;
+    line-height: 1;
+  }
+}
