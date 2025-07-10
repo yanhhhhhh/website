@@ -1,33 +1,33 @@
 import { lazy } from 'react';
 import { InitRouter } from '../type';
 // lazy 会导致iframe无法传递消息
-import BottomMenuManage from '@/pages/menuManage/bottom';
-import PageManage from '@/pages/pageManage';
-import TopMenuManage from '@/pages/menuManage/top';
-//lazy 会导致iframe无法传递消息
-const ExternalHtmlPage = lazy(() => import('@/pages/externalHtmlPage'));
-const Region = lazy(() => import('@/pages/region'));
-const TemplateRenderPage = lazy(() => import('@/pages/templateRenderPage'));
-const NetworkError = lazy(() => import('@/pages/networkError'));
-const NewsDetail = lazy(() => import('@/pages/news/components/newsDetail'));
-const NoMatch = lazy(() => import('@/pages/noMatch'));
-const EditorPage = lazy(() => import('@/pages/editor/editorPage'));
+// import BottomMenuManage from '@/pages/menuManage/bottom';
+// import PageManage from '@/pages/pageManage';
+// import TopMenuManage from '@/pages/menuManage/top';
+// //lazy 会导致iframe无法传递消息
+// const ExternalHtmlPage = lazy(() => import('@/pages/externalHtmlPage'));
+// const Region = lazy(() => import('@/pages/region'));
+// const TemplateRenderPage = lazy(() => import('@/pages/templateRenderPage'));
+// const NetworkError = lazy(() => import('@/pages/networkError'));
+// const NewsDetail = lazy(() => import('@/pages/news/components/newsDetail'));
+// const NoMatch = lazy(() => import('@/pages/noMatch'));
+// const EditorPage = lazy(() => import('@/pages/editor/editorPage'));
 
 const NetworkErrorRouter: InitRouter = {
   path: 'network_error',
 
-  element: <NetworkError />,
+  // element: <NetworkError />,
 };
 export const templateRenderRouter: InitRouter = {
   path: 'templateRender/:routerCode/:id?',
-  element: <TemplateRenderPage />,
+  // element: <TemplateRenderPage />,
 };
 export const regionRouter: InitRouter = {
   path: 'region',
   handle: {
     key: 'region',
   },
-  element: <Region />,
+  // element: <Region />,
 };
 export const newsDetailRouter: InitRouter = {
   name: 'navigator.newsDetail',
@@ -35,41 +35,41 @@ export const newsDetailRouter: InitRouter = {
   handle: {
     key: 'newsDetail',
   },
-  element: <NewsDetail />,
+  // element: <NewsDetail />,
 };
 export const constantRouter = [
   NetworkErrorRouter,
   {
     path: 'editor/:id?',
-    element: <EditorPage />,
+    // element: <EditorPage />,
     handle: {
       key: 'editor',
     },
   },
   {
     path: 'pageManage',
-    element: <PageManage />,
+    // element: <PageManage />,
     handle: {
       key: 'pageManage',
     },
   },
   {
     path: 'topMenuManage',
-    element: <TopMenuManage />,
+    // element: <TopMenuManage />,
     handle: {
       key: 'topMenuManage',
     },
   },
   {
     path: 'bottomMenuManage',
-    element: <BottomMenuManage />,
+    // element: <BottomMenuManage />,
     handle: {
       key: 'bottomMenuManage',
     },
   },
   {
     path: 'externalHtmlPage/:id?',
-    element: <ExternalHtmlPage />,
+    // element: <ExternalHtmlPage />,
     handle: {
       key: 'externalHtmlPage',
     },
@@ -80,6 +80,6 @@ export const constantRouter = [
     handle: {
       key: 'noMatch',
     },
-    element: <NoMatch />,
+    // element: <NoMatch />,
   },
 ];

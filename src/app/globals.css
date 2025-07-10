@@ -1,7 +1,7 @@
+/* @import 'tailwindcss'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --hero-transition-delay: 1s;
   --hero-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);

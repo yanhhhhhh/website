@@ -1,3 +1,4 @@
+'use client';
 import { ICase } from '@/api/case';
 import { Manual } from '@/api/download';
 import { trackGather } from '@/api/track';
@@ -6,31 +7,39 @@ import { baseConfig } from '@/stores';
 import { downloadHashMap, websiteAccessMap, websiteLinkMap } from '@/utils';
 import { useAtomValue } from 'jotai';
 import { useEffect } from 'react';
-import { UIMatch, useMatches } from 'react-router-dom';
+import { UIMatch } from 'react-router-dom';
 import { useLocale } from './useLocale';
-
+import { usePathname, useParams } from 'next/navigation';
+import path from 'path';
 export const useTrackGather = () => {};
 function useTrackGatherBase() {
-  const matches = useMatches();
+  const pathname = usePathname();
+  const params = useParams();
   const { localeCountryCode } = useLocale();
   const { device } = useAtomValue(baseConfig);
-  const currentRouter = matches[matches.length - 1];
+  const currentRouter = {
+    params: params as Record<string, string>,
+    pathname,
+  };
   const accessDevice = device.isPc ? 'PC' : 'Mobile';
-  return { matches, localeCountryCode, currentRouter, accessDevice };
+  return { localeCountryCode, currentRouter, accessDevice };
 }
 export function usePageViewTracking(isInitialized: boolean) {
   const { localeCountryCode, currentRouter, accessDevice } =
     useTrackGatherBase();
-  async function pageViewTrack(current: UIMatch<unknown, unknown>) {
-    const handle = current.handle as { key: string }; // 假设 key 是字符串类型
+  async function pageViewTrack(current: {
+    params: Record<string, string>;
+    pathname: string;
+  }) {
+    // const handle = current.handle as { key: string }; // 假设 key 是字符串类型
 
     let key = '';
-    if (!handle) {
-      key = current.params?.routerCode as string;
-    }
-    if (handle && 'key' in handle) {
-      key = handle.key;
-    }
+    // if (!handle) {
+    //   key = current.params?.routerCode as string;
+    // }
+    // if (handle && 'key' in handle) {
+    //   key = handle.key;
+    // }
     if (key && websiteAccessMap[key]) {
       const trackContent = {
         ...websiteAccessMap[key],

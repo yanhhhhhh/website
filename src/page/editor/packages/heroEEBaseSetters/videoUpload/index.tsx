@@ -1,3 +1,4 @@
+'use client';
 import { Button, GetProp, Upload } from 'antd';
 
 import { UploadProps } from 'antd';

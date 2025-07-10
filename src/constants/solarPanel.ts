@@ -5,7 +5,6 @@ import solarPanelMobileProductionImage02 from '@/assets/images/solarPanel/02-m.p
 import solarPanelMobileProductionImage03 from '@/assets/images/solarPanel/03-m.webp';
 
 export const solarPanelBanner = {
-  key: 'banner',
   image: solarPanelBannerImage,
   title: 'solarPanelPage.bannerTitle',
   description: 'solarPanelPage.bannerDesc',

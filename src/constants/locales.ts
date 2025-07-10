@@ -1,10 +1,11 @@
 import enUS from '@/assets/jsons/locales/en_US.json';
 import zhCN from '@/assets/jsons/locales/zh_CN.json';
+
 export const resources = {
-  'en_US': {
+  en_US: {
     translation: enUS,
   },
-  'zh_CN': {
+  zh_CN: {
     translation: zhCN,
   },
 };

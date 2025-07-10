@@ -1,5 +1,13 @@
 'use client';
-import '@/utils/language/i18nConfig.ts';
+import { useTranslation } from 'react-i18next';
+import '@/utils/language/clientInit';
+
 export default function Page() {
-  return <>locale Page</>;
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      <h1>{t('navigator.aboutUs')}</h1>
+    </div>
+  );
 }

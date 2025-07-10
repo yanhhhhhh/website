@@ -1,18 +1,21 @@
+'use client';
 import { InitRouter } from '@/router/type';
-import { useCallback } from 'react';
 import {
-  useLocation,
-  useNavigate,
   useParams,
+  usePathname,
   useSearchParams,
-} from 'react-router-dom';
+  useRouter,
+} from 'next/navigation';
+
+import { useCallback } from 'react';
 
 export const useHeroNavigate = () => {
-  const { locale } = useParams();
-  const [search] = useSearchParams();
-  const location = useLocation();
+  const { locale } = useParams<{ locale: string }>();
 
-  const navigate = useNavigate();
+  const search = useSearchParams();
+  const pathName = usePathname();
+
+  const navigate = useRouter();
 
   const getPath = useCallback(
     (path?: string) => {
@@ -59,11 +62,11 @@ export const useHeroNavigate = () => {
   const navigateTo = useCallback(
     (path?: string) => {
       const newPath = getPath(path);
-      navigate(newPath, {
-        state: { from: location.pathname, location, search: location.search },
-      });
+      // navigate(newPath, {
+      //   state: { from: location.pathname, location, search: location.search },
+      // });
     },
-    [getPath, location, navigate]
+    [getPath, navigate]
   );
   return {
     navigateTo,

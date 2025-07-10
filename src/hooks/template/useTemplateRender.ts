@@ -1,12 +1,13 @@
 import { getLabelList } from '@/api/label';
 import { RegionCountry } from '@/constants';
-import { useSearchParams } from 'react-router-dom';
+
 import { getList } from '@/api/pageManage';
 import { useSetAtom } from 'jotai';
 import { templateBottomMenuListAtom, templateMenuListAtom } from '@/stores';
+import { useSearchParams } from 'next/navigation';
 
 export const useTemplateRender = () => {
-  const [search] = useSearchParams();
+  const search = useSearchParams();
   const setTemplateMenuList = useSetAtom(templateMenuListAtom);
   const setTemplateBottomMenuList = useSetAtom(templateBottomMenuListAtom);
   function getLabelListPromise(element: RegionCountry, type: 'top' | 'bottom') {

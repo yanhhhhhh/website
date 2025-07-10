@@ -19,3 +19,4 @@ export const SolarPanelSeries = () => {
     </div>
   );
 };
+export default SolarPanelSeries;

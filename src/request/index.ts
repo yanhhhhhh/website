@@ -172,13 +172,13 @@ const request = new Request({});
 
 const authRequest = new Request({
   headers: {
-    Authorization: `${localStorage.getItem('token')}`,
+    // Authorization: `${localStorage.getItem('token')}`,
   },
 });
 // 拦截器 加token
 authRequest.instance.interceptors.request.use(
   (config) => {
-    config.headers['Authorization'] = `${localStorage.getItem('token')}`;
+    // config.headers['Authorization'] = `${localStorage.getItem('token')}`;
     return config;
   },
   (err) => {
