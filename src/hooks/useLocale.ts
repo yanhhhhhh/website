@@ -1,14 +1,14 @@
 'use client';
-import { RegionCountry, otherThirdLinks } from '@/constants';
+import { RegionCountry } from '@/constants/region';
 
-import { baseConfig, isShowRegion, templateId } from '@/stores';
+import { baseConfig } from '@/stores/baseConfig';
 import i18n from '@/utils/language/i18nConfig';
 
 import { getExampleTypeDict } from '@/api/case';
 
-import { thirdLinks } from '@/constants';
+import { otherThirdLinks, thirdLinks } from '@/constants/navigator';
 
-import { isShowMobileNav } from '@/stores';
+import { isShowMobileNav, isShowRegion, templateId } from '@/stores';
 import { exampleTypeAtom } from '@/stores/case';
 
 import { message } from '@/providers';

@@ -3,14 +3,14 @@ import { useLocale, useWebsiteLinkTrack } from '@/hooks';
 import { useAgreement } from '@/hooks/useAgreement';
 import { useCustomization } from '@/hooks/useCustomization';
 import { Flex } from 'antd';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import { Icon } from '..';
 import LanguageSwitch from '../languageSwitch';
 import { goCnMps, goCopyRight } from './tools';
 import './view.less';
 
 const PcFooter = () => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const { customPcFooterNav, customServiceHotline, customEmail } =
     useCustomization();
   const {

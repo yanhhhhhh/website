@@ -1,9 +1,9 @@
-import { Africa, allCountry, EastAsia } from '@/constants';
+import { Africa, allCountry, EastAsia } from '@/constants/region';
 // 基础存储
 import { atomWithStorage, createJSONStorage } from 'jotai/utils';
 import { storeKeys } from './constants';
 
-import { RegionCountry } from '@/constants';
+import { RegionCountry } from '@/constants/region';
 import type { Device } from '@/utils';
 
 enum ELang {

@@ -1,8 +1,9 @@
 // next.config.ts
-import withLess from 'next-with-less';
-import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
+import createNextIntlPlugin from 'next-intl/plugin';
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   reactStrictMode: true,
 
   // 如果你需要定制 Less 的变量（如用于 Ant Design）
@@ -16,5 +17,6 @@ const nextConfig: NextConfig = {
   // },
 };
 
-// 使用 withLess 包裹配置
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin()(nextConfig);
+
+export default withNextIntl;

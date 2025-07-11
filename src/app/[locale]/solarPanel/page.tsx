@@ -1,6 +1,6 @@
 'use client';
 import { Card, CardProps } from '@/components/card';
-import { solarPanelBanner } from '@/constants';
+import { solarPanelBanner } from '@/constants/solarPanel';
 import { baseConfig } from '@/stores';
 
 import { useAtomValue } from 'jotai';
@@ -31,7 +31,7 @@ export default function SolarPanelPage() {
         backgroundColor: '#f8f8f8',
       }}
     >
-      <Card {...bannerProps}></Card>
+      {/* <Card {...bannerProps}></Card> */}
       <SolarPanelSeries />
     </div>
   );

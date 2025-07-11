@@ -1,0 +1,37 @@
+{
+  "client-page": {
+    "back-to-home": "Tornare alla pagina principale",
+    "counter_many": "selezionati {{count}}",
+    "counter_one": "uno selezionato",
+    "counter_other": "{{count}} selezionati",
+    "counter_zero": "nessuno selezionato",
+    "h1": "Una pagina client, per dimostrare il i18n nel client",
+    "title": "Pagina client",
+    "to-second-client-page": "alla seconda pagina client"
+  },
+  "footer": {
+    "description": "Questo è un componente non di pagina che richiede il proprio spazio dei nomi",
+    "helpLocize": "Con l'utilizzare <1>locize</1> sostieni direttamente il futuro di <3>i18next</3>.",
+    "languageSwitcher": "Passa da <1>{{lng}}</1> a: "
+  },
+  "second-client-page": {
+    "back-to-home": "Tornare alla pagina principale",
+    "h1": "Una seconda pagina client, per dimostrare il i18n nel client",
+    "title": "Seconda pagina client",
+    "to-client-page": "alla pagina client"
+  },
+  "second-page": {
+    "back-to-home": "Tornare alla pagina principale",
+    "h1": "Una seconda pagina, per dimostrare il routing",
+    "title": "Seconda pagina"
+  },
+  "h1": "Un semplice esempio",
+  "title": "Casa",
+  "to-client-page": "Alla pagina client",
+  "to-second-page": "Alla seconda pagina",
+  "welcome": "Benvenuti a Next.js 13/14/15 <1>con le nuove funzionalità di app directory</1> e i18next",
+  "blog": {
+    "text": "Scopri il corrispondente <1>articolo</1> che descrivere questo esempio.",
+    "link": "https://locize.com/blog/next-app-dir-i18n/"
+  }
+}

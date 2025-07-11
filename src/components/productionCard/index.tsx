@@ -1,5 +1,7 @@
+'use client';
+import { useTranslations } from 'next-intl';
 import Image, { StaticImageData } from 'next/image';
-import { useTranslation } from 'react-i18next';
+
 export interface ProductionCardProps {
   title: string;
   fontColor?: string;
@@ -15,7 +17,7 @@ export interface ProductionCardProps {
   more?: string;
 }
 export const ProductionCard = (pros: ProductionCardProps) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const {
     title,
     image,
@@ -59,7 +61,7 @@ export const ProductionCard = (pros: ProductionCardProps) => {
         <Image
           src={image}
           style={imageStyle}
-          alt={t(title)}
+          alt={title}
           className="!w-full h-[600px] lg:w-[600px] lg:h-[400px] absolute top-0 left-0 -z-10 cursor-pointer transition-all duration-[600ms] ease-in-out hover:scale-110"
         />
       </div>

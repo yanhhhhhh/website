@@ -1,13 +1,16 @@
-'use client';
-import { useTranslation } from 'react-i18next';
-import '@/utils/language/clientInit';
+import { getTranslations } from 'next-intl/server';
 
-export default function Page() {
-  const { t } = useTranslation();
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale });
 
   return (
     <div>
-      <h1>{t('navigator.aboutUs')}</h1>
+      <div className="text-black">{t('homeSceneLearn.title')}</div>
     </div>
   );
 }

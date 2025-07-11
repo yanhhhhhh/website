@@ -1,10 +1,10 @@
 import { contactUsList } from '@/constants';
 import { useWebsiteLinkTrack } from '@/hooks';
-import { useTranslation } from 'react-i18next';
+import { useTranslations } from 'next-intl';
 import './index.less';
 const ContactEmail = () => {
   const { emailTrack } = useWebsiteLinkTrack();
-  const { t } = useTranslation();
+  const t = useTranslations();
 
   return (
     <div className="footer-contactUs-container ">

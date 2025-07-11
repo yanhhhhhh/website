@@ -1,11 +1,11 @@
 'use client';
 import { useMemo, PropsWithChildren, useState } from 'react';
-import { useTranslation } from 'react-i18next';
 
 import styles from './index.module.css';
-import { useLocale, useWebsiteLinkTrack } from '@/hooks';
+import { useLocale } from '@/hooks/useLocale';
 import { useAtomValue } from 'jotai';
-import { baseConfig } from '@/stores';
+import { baseConfig } from '@/stores/baseConfig';
+import { useTranslations } from 'next-intl';
 
 export type MoreType = 'learnMoreInfo' | 'contactUs' | 'learnMore';
 export interface CardProps extends PropsWithChildren {
@@ -27,18 +27,18 @@ export interface CardProps extends PropsWithChildren {
   descriptionInnerHtml?: boolean;
 }
 export const Card = (pros: CardProps) => {
-  const { t } = useTranslation();
+  const t = useTranslations();
   const [isHover, setIsHover] = useState(false);
-  // const { navigateTo } = useLocale();
+  const { navigateTo } = useLocale();
   const { languageCode } = useAtomValue(baseConfig);
-  // const clickMore = () => {
-  //   navigateTo(more);
-  // };
-  try {
-    const { contactUsTrack } = useWebsiteLinkTrack();
-  } catch (error) {
-    console.error('useWebsiteLinkTrack is not defined');
-  }
+  const clickMore = () => {
+    navigateTo(more);
+  };
+  // try {
+  //   const { contactUsTrack } = useWebsiteLinkTrack();
+  // } catch (error) {
+  //   console.error('useWebsiteLinkTrack is not defined');
+  // }
   const {
     title,
     description,
@@ -86,12 +86,12 @@ export const Card = (pros: CardProps) => {
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
-      {/* <div
+      <div
         className={styles.heroCardContent}
         style={{ color: fontColor, ...contentStyle }}
       >
         <div className={`${styles.heroCardTitle} `} style={titleStyle}>
-          {title && t(title)}
+          {title}
         </div>
         {!descriptionInnerHtml
           ? description && (
@@ -99,14 +99,14 @@ export const Card = (pros: CardProps) => {
                 className={`${styles.heroCardDescription} `}
                 style={descriptionStyle}
               >
-                {t(description)}
+                {description}
               </div>
             )
           : description && (
               <div
                 className={`${styles.heroCardDescription} innerHtml`}
                 style={descriptionStyle}
-                dangerouslySetInnerHTML={{ __html: t(description) }}
+                dangerouslySetInnerHTML={{ __html: description }}
               ></div>
             )}
         {moreType === 'learnMoreInfo' && (
@@ -126,18 +126,18 @@ export const Card = (pros: CardProps) => {
             target="_blank"
             rel="noreferrer"
             onClick={() => {
-              more && contactUsTrack(more);
+              // more && contactUsTrack(more);
             }}
           >
-            {t('button.contactUs')}&gt;
+            {t('contactUs')}&gt;
           </a>
         )}
         {moreType === 'learnMore' && more && (
           <div className={`${styles.heroCardMore} `} style={cardMoreStyel}>
-            {t('button.learnMore')}&gt;
+            {t('learnMore')}&gt;
           </div>
         )}
-      </div> */}
+      </div>
       {children}
       {/* <img className="hero-card-background" src={image} alt={t(title)} /> */}
     </div>
